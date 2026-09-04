@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="pt-BR">
+<!--
+  PÁGINA: Obrigado — Método Equilíbrio Vital® (produto 02) + pesquisa de interesse em formato de acompanhamento
+  CLIENTE: Sayuri de Sousa (via Geller Group) — clientes/geller/clientes/sayuri/
+  OBJETIVO: confirmar a compra, levar à área de membros e captar interesse (formulário) para um formato futuro
+  PALETA: sub-paleta verde do produto 2 (jade #3E9C70, menta #7FCBA0, verde-floresta nas seções escuras; roxo da marca só em logo/rótulos/itálicos)
+  STATUS: v1 — aguardando validação
+  PENDÊNCIAS: MEMBER_URL (área de membros), FORM_URL (formulário de interesse), "Acesso por X", número do pedido
+              (via ?pedido= na URL), GTM. "[sobrenome]" preenchido com "de Sousa" (logo)
+  HUMANIZER: copy mantida na íntegra; zero emojis; sem foto de banco de imagem
+-->
+
+<head>
+  <!-- Google Tag Manager — PENDENTE -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Vaga confirmada | Método Equilíbrio Vital — Sayuri de Sousa</title>
+  <meta name="description" content="Sua vaga no Equilíbrio Vital está confirmada. O seu acesso já está liberado.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbfdfb;
+      --surface: #ffffff;
+      --surface-2: #f1f7f3;
+      --ink: #142a21;
+      --text: #2f4a3d;
+      --muted: #5f7a6c;
+      --violet: #4a1a6b;
+      --violet-mid: #6a3a99;
+      --night: #0f2a20;
+      --forest: #163d2e;
+      --dark-3: #1f5a43;
+      --mint-soft: #dcefe3;
+      --accent: #3e9c70;
+      --accent-bright: #7fcba0;
+      --accent-deep: #2a7352;
+      --accent-glow: rgba(62, 156, 112, .30);
+      --on-dark: #ecf5ef;
+      --on-dark-muted: #b9d4c4;
+      --border: rgba(31, 90, 67, .12);
+      --border-dark: rgba(127, 203, 160, .22);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Manrope, "Segoe UI", sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      text-wrap: balance;
+    }
+
+    h1 em,
+    h2 em {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--violet);
+    }
+
+    p {
+      line-height: 1.75;
+    }
+
+    .wrap {
+      width: min(1040px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--violet-mid);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before,
+    .eyebrow.center::after {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .eyebrow.center {
+      justify-content: center;
+    }
+
+    .cta {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      min-height: 60px;
+      padding: 18px 34px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-deep) 70%, #235f44);
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: .05em;
+      line-height: 1.3;
+      text-align: center;
+      text-transform: uppercase;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 16px 38px var(--accent-glow);
+      transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4), 0 22px 46px rgba(62, 156, 112, .42);
+    }
+
+    .cta:focus-visible {
+      outline: 3px solid var(--violet-mid);
+      outline-offset: 3px;
+    }
+
+    .cta.mint {
+      background: linear-gradient(135deg, #a4dcbd, var(--accent-bright) 60%, #62b58b);
+      color: var(--ink);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), 0 16px 38px rgba(127, 203, 160, .3);
+    }
+
+    .cta-note {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ---------- CONFIRMAÇÃO (escura) ---------- */
+    .confirm {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 30px 0 88px;
+      background: radial-gradient(circle at 50% -10%, rgba(127, 203, 160, .2), transparent 42%), linear-gradient(175deg, var(--night), var(--forest) 55%, var(--dark-3));
+      color: var(--on-dark);
+    }
+
+    .mandala {
+      position: absolute;
+      z-index: -1;
+      color: currentColor;
+      pointer-events: none;
+    }
+
+    .confirm .mandala.big {
+      top: -260px;
+      left: 50%;
+      width: 900px;
+      height: 900px;
+      transform: translateX(-50%);
+      color: #fff;
+      opacity: .05;
+    }
+
+    .confirm .mandala.side {
+      right: -180px;
+      bottom: -220px;
+      width: 520px;
+      height: 520px;
+      color: var(--accent-bright);
+      opacity: .08;
+    }
+
+    .brand-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 64px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--accent-bright);
+    }
+
+    .brand svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    .brand b {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 1px;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--accent-bright);
+    }
+
+    .brand-bar .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid var(--border-dark);
+      border-radius: 50px;
+      color: var(--on-dark-muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .brand-bar .pill::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-bright);
+      box-shadow: 0 0 0 4px rgba(127, 203, 160, .2);
+    }
+
+    .confirm-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .check-badge {
+      display: grid;
+      place-items: center;
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 26px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #a4dcbd, var(--accent) 70%);
+      color: var(--night);
+      box-shadow: 0 18px 44px rgba(62, 156, 112, .4), 0 0 0 14px rgba(127, 203, 160, .12);
+    }
+
+    .check-badge svg {
+      width: 42px;
+      height: 42px;
+    }
+
+    .confirm .eyebrow {
+      justify-content: center;
+      color: var(--accent-bright);
+      margin-bottom: 20px;
+    }
+
+    .confirm .eyebrow::after {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .confirm h1 {
+      margin: 0 0 14px;
+      color: #fff;
+      font-size: clamp(34px, 4.8vw, 54px);
+      line-height: 1.06;
+    }
+
+    .confirm h1 em {
+      color: var(--accent-bright);
+    }
+
+    .confirm-lead {
+      margin: 0 auto 36px;
+      color: var(--on-dark);
+      font-size: 19px;
+      font-weight: 600;
+    }
+
+    .order-card {
+      max-width: 560px;
+      margin: 0 auto 30px;
+      padding: 26px 30px;
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .06);
+      backdrop-filter: blur(6px);
+      text-align: left;
+    }
+
+    .order-card .kicker {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--accent-bright);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .order-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+      border-top: 1px solid var(--border-dark);
+      font-size: 14px;
+    }
+
+    .order-row span {
+      color: var(--on-dark-muted);
+    }
+
+    .order-row b {
+      color: #fff;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .email-note {
+      max-width: 560px;
+      margin: 0 auto 30px;
+      color: var(--on-dark-muted);
+      font-size: 15px;
+    }
+
+    /* ---------- PERGUNTA / INTERESSE ---------- */
+    .ask {
+      padding: 104px 0;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .ask .mandala {
+      left: -300px;
+      top: 50%;
+      width: 760px;
+      height: 760px;
+      transform: translateY(-50%);
+      color: var(--accent);
+      opacity: .05;
+    }
+
+    .ask-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .ask-head {
+      position: sticky;
+      top: 40px;
+    }
+
+    .ask-head h2 {
+      margin: 16px 0 18px;
+      font-size: clamp(36px, 4.8vw, 56px);
+      line-height: 1.04;
+    }
+
+    .ask-head p {
+      color: var(--text);
+      font-size: 17px;
+    }
+
+    .ask-head p strong {
+      color: var(--ink);
+    }
+
+    .ask-body p {
+      color: var(--text);
+      font-size: 16.5px;
+    }
+
+    .not-yet {
+      margin: 26px 0;
+      padding: 22px 26px;
+      border-left: 3px solid var(--accent);
+      background: rgba(220, 239, 227, .5);
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 26px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.35;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .form-card {
+      margin-top: 34px;
+      padding: 34px 36px;
+      border-radius: 22px;
+      background: linear-gradient(160deg, var(--forest), var(--dark-3));
+      color: var(--on-dark);
+      box-shadow: 0 30px 70px rgba(20, 42, 33, .25);
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .form-card .mandala {
+      right: -140px;
+      top: -140px;
+      width: 380px;
+      height: 380px;
+      color: #fff;
+      opacity: .08;
+      transform: none;
+      left: auto;
+    }
+
+    .form-card .kicker {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--accent-bright);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .form-card h3 {
+      margin: 0 0 14px;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1.15;
+    }
+
+    .form-card p {
+      color: var(--on-dark-muted);
+      font-size: 15.5px;
+    }
+
+    .form-card p strong {
+      color: #fff;
+    }
+
+    .facts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 26px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .facts li {
+      padding: 9px 15px;
+      border: 1px solid var(--border-dark);
+      border-radius: 50px;
+      background: rgba(255, 255, 255, .06);
+      color: var(--on-dark);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .form-card .cta {
+      width: 100%;
+    }
+
+    /* ---------- RODAPÉ ---------- */
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    footer b {
+      color: var(--violet);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    footer i {
+      margin: 0 8px;
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    .reveal-item {
+      opacity: 0;
+      transform: translate3d(0, 26px, 0);
+      transition: opacity .72s ease, transform .72s cubic-bezier(.2, .72, .18, 1);
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    .reveal-item.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .ask {
+        padding: 76px 0;
+      }
+
+      .ask-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .ask-head {
+        position: static;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .wrap {
+        width: min(100% - 28px, 1040px);
+      }
+
+      .confirm {
+        padding: 20px 0 64px;
+      }
+
+      .brand-bar {
+        margin-bottom: 40px;
+      }
+
+      .brand-bar .pill {
+        display: none;
+      }
+
+      .confirm h1 {
+        font-size: 32px;
+      }
+
+      .confirm-lead {
+        font-size: 16px;
+      }
+
+      .order-card {
+        padding: 20px;
+      }
+
+      .ask-head h2 {
+        font-size: 33px;
+      }
+
+      .not-yet {
+        font-size: 21px;
+      }
+
+      .form-card {
+        padding: 26px 22px;
+      }
+
+      .cta {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) — PENDENTE -->
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mandala" viewBox="-100 -100 200 200">
+      <g fill="currentColor">
+        <g id="petal">
+          <ellipse cx="0" cy="-36" rx="5.5" ry="21" />
+        </g>
+        <use href="#petal" transform="rotate(22.5)" />
+        <use href="#petal" transform="rotate(45)" />
+        <use href="#petal" transform="rotate(67.5)" />
+        <use href="#petal" transform="rotate(90)" />
+        <use href="#petal" transform="rotate(112.5)" />
+        <use href="#petal" transform="rotate(135)" />
+        <use href="#petal" transform="rotate(157.5)" />
+        <use href="#petal" transform="rotate(180)" />
+        <use href="#petal" transform="rotate(202.5)" />
+        <use href="#petal" transform="rotate(225)" />
+        <use href="#petal" transform="rotate(247.5)" />
+        <use href="#petal" transform="rotate(270)" />
+        <use href="#petal" transform="rotate(292.5)" />
+        <use href="#petal" transform="rotate(315)" />
+        <use href="#petal" transform="rotate(337.5)" />
+        <g id="arm">
+          <ellipse cx="0" cy="-64" rx="6" ry="9" />
+          <circle cx="0" cy="-80" r="3.2" />
+          <circle cx="0" cy="-92" r="2" />
+        </g>
+        <use href="#arm" transform="rotate(45)" />
+        <use href="#arm" transform="rotate(90)" />
+        <use href="#arm" transform="rotate(135)" />
+        <use href="#arm" transform="rotate(180)" />
+        <use href="#arm" transform="rotate(225)" />
+        <use href="#arm" transform="rotate(270)" />
+        <use href="#arm" transform="rotate(315)" />
+        <circle cx="0" cy="0" r="4" />
+      </g>
+    </symbol>
+    <symbol id="check" viewBox="0 0 24 24">
+      <path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+  </svg>
+
+  <main>
+    <!-- ================= CONFIRMAÇÃO ================= -->
+    <section class="confirm">
+      <svg class="mandala big" aria-hidden="true"><use href="#mandala" /></svg>
+      <svg class="mandala side" aria-hidden="true"><use href="#mandala" /></svg>
+      <div class="wrap">
+        <div class="brand-bar">
+          <a class="brand" href="#" aria-label="Sayuri de Sousa">
+            <svg aria-hidden="true"><use href="#mandala" /></svg>
+            <span><b>Sayuri de Sousa</b><small>Método Equilíbrio Vital</small></span>
+          </a>
+          <span class="pill">Vaga confirmada</span>
+        </div>
+
+        <div class="confirm-inner">
+          <div class="check-badge" aria-hidden="true"><svg><use href="#check" /></svg></div>
+          <div class="eyebrow">Método Equilíbrio Vital®</div>
+          <h1>Sua vaga no Equilíbrio Vital está confirmada. Obrigada por confiar no <em>Método Equilíbrio Vital.</em>
+          </h1>
+          <p class="confirm-lead">O seu acesso já está liberado.</p>
+          <div class="order-card">
+            <span class="kicker">Detalhes da sua compra:</span>
+            <div class="order-row"><span>Data da compra</span><b id="data-compra">—</b></div>
+            <!-- PENDENTE: número do pedido — preenchido se a URL vier com ?pedido=XXXX (ou ?order=) -->
+            <div class="order-row"><span>Número do pedido</span><b id="numero-pedido">—</b></div>
+          </div>
+          <p class="email-note">Você vai receber um e-mail com todas as informações de acesso. Se ele não chegar nos
+            próximos minutos, dá uma olhada na pasta de spam ou promoções.</p>
+          <!-- PENDENTE: MEMBER_URL no script -->
+          <a class="cta mint" href="#" data-member>Acessar o programa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PERGUNTA / INTERESSE ================= -->
+    <section class="ask">
+      <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+      <div class="wrap ask-grid">
+        <div class="ask-head">
+          <div class="eyebrow">Uma pergunta</div>
+          <h2>Antes de começar, queria te fazer uma <em>pergunta…</em></h2>
+          <p>O Equilíbrio Vital é um programa completo, mas eu sei que <strong>algumas vão querer mais.</strong></p>
+        </div>
+        <div class="ask-body">
+          <p>Mais proximidade, um olhar individual para o seu caso, um acompanhamento mais de perto na hora de aplicar
+            tudo isso na sua rotina real. Algo que vai além do programa.</p>
+          <div class="not-yet">Esse formato ainda não existe.</div>
+          <p>É uma ideia que estou avaliando construir, e quero primeiro entender quem realmente teria interesse em algo
+            assim, antes de desenhar qualquer coisa.</p>
+
+          <div class="form-card">
+            <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+            <span class="kicker">Formulário curto</span>
+            <h3>Se isso faz sentido para você, preparei um formulário curto.</h3>
+            <p><strong>Não é uma compra e não é compromisso nenhum.</strong></p>
+            <p>É só uma forma de você sinalizar interesse e de eu te conhecer melhor no meio das minhas alunas.</p>
+            <p>Quando esse formato existir, quem preencheu vai ser a primeira a saber, e vai ter prioridade nas vagas,
+              que serão poucas por natureza.</p>
+            <ul class="facts">
+              <li>Leva uns 5 minutos.</li>
+              <li>Eu leio pessoalmente cada resposta.</li>
+            </ul>
+            <!-- PENDENTE: FORM_URL no script -->
+            <a class="cta" href="#" data-form>Quero sinalizar meu interesse</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <b>Sayuri de Sousa</b> · Medicina Oriental &amp; Nutrição Funcional<br>
+      <!-- PENDENTE: "Acesso por X" -->
+      Acesso por X<i>|</i>Compra 100% segura<i>|</i>Suporte disponível<i>|</i>Direitos reservados à Sayuri de Sousa
+    </div>
+  </footer>
+
+  <script>
+    // PENDENTE: links reais. Enquanto vazios, os botões ficam inertes.
+    const MEMBER_URL = "";   // área de membros do Equilíbrio Vital
+    const FORM_URL = "";     // formulário de interesse (Typeform/Google Forms/etc.)
+    document.querySelectorAll('[data-member]').forEach((a) => {
+      if (MEMBER_URL) { a.href = MEMBER_URL; a.target = '_blank'; a.rel = 'noopener'; }
+    });
+    document.querySelectorAll('[data-form]').forEach((a) => {
+      if (FORM_URL) { a.href = FORM_URL; a.target = '_blank'; a.rel = 'noopener'; }
+    });
+
+    // Data da compra (hoje) e número do pedido vindo da URL (?pedido= ou ?order=)
+    const d = new Date();
+    const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+    document.getElementById('data-compra').textContent = `${d.getDate()} de ${meses[d.getMonth()]} de ${d.getFullYear()}`;
+    const params = new URLSearchParams(location.search);
+    const pedido = params.get('pedido') || params.get('order') || params.get('order_id');
+    if (pedido) document.getElementById('numero-pedido').textContent = `#${pedido}`;
+
+    // Reveal ao rolar
+    const revealItems = document.querySelectorAll('.order-card,.not-yet,.form-card');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    revealItems.forEach((item, index) => {
+      item.classList.add('reveal-item');
+      item.style.setProperty('--reveal-delay', `${(index % 3) * 80}ms`);
+    });
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
+    } else {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.14 });
+      revealItems.forEach((item) => obs.observe(item));
+    }
+  </script>
+</body>
+
+</html>
