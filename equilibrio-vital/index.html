@@ -394,30 +394,24 @@
       box-shadow: 0 0 0 4px rgba(127, 203, 160, .2);
     }
 
-    .hero-copy {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 64px;
+      align-items: center;
+      margin-bottom: 64px;
     }
 
     .hero .eyebrow {
-      justify-content: center;
       color: var(--accent-bright);
       margin-bottom: 22px;
     }
 
-    .hero .eyebrow::after {
-      content: "";
-      width: 34px;
-      height: 1px;
-      background: currentColor;
-    }
-
     .hero h1 {
-      margin: 0 auto 22px;
+      margin: 0 0 22px;
       color: #fff;
-      font-size: clamp(38px, 5.4vw, 66px);
-      line-height: 1.02;
+      font-size: clamp(38px, 4.6vw, 58px);
+      line-height: 1.04;
     }
 
     .hero h1 em {
@@ -425,12 +419,82 @@
     }
 
     .hero-lead {
-      max-width: 720px;
-      margin: 0 auto 40px;
+      max-width: 620px;
+      margin: 0 0 28px;
       color: var(--on-dark-muted);
       font-size: 18px;
       font-weight: 500;
       line-height: 1.6;
+    }
+
+    .hero-copy .trust {
+      justify-content: flex-start;
+      margin: 0;
+    }
+
+    .hero-portrait {
+      position: relative;
+      width: min(100%, 440px);
+      margin-left: auto;
+      aspect-ratio: 4 / 5;
+      border-radius: 26px;
+      overflow: hidden;
+      background: #0b1f18;
+      box-shadow: 0 40px 90px rgba(0, 0, 0, .45), 0 0 0 1px rgba(127, 203, 160, .3);
+    }
+
+    .hero-portrait::before {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      z-index: 2;
+      border: 1px solid rgba(127, 203, 160, .35);
+      border-radius: 18px;
+      pointer-events: none;
+    }
+
+    .hero-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .hero-portrait::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, transparent 55%, rgba(11, 31, 24, .85));
+      pointer-events: none;
+    }
+
+    .portrait-chip {
+      position: absolute;
+      z-index: 3;
+      left: 26px;
+      right: 26px;
+      bottom: 26px;
+    }
+
+    .portrait-chip b {
+      display: block;
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+
+    .portrait-chip span {
+      display: block;
+      margin-top: 4px;
+      color: var(--accent-bright);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
     }
 
     .vsl {
@@ -1507,10 +1571,31 @@
       position: relative;
       isolation: isolate;
       overflow: hidden;
-      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: 32px 40px;
       background: linear-gradient(135deg, var(--violet-night), var(--dark-3));
       color: #fff;
-      text-align: center;
+      text-align: left;
+    }
+
+    .offer-photo {
+      position: relative;
+      z-index: 1;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 0 4px rgba(127, 203, 160, .25), 0 0 0 1px rgba(127, 203, 160, .6), 0 20px 44px rgba(0, 0, 0, .35);
+    }
+
+    .offer-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .offer-top .mandala {
@@ -1942,8 +2027,25 @@
       .faq-grid,
       .about-grid,
       .offer-body,
-      .gifts {
+      .gifts,
+      .hero-grid,
+      .offer-top {
         grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 36px;
+        margin-bottom: 44px;
+      }
+
+      .hero-portrait {
+        margin: 0 auto;
+        width: min(100%, 380px);
+      }
+
+      .offer-top {
+        justify-items: center;
+        text-align: center;
       }
 
       .tries-head,
@@ -2266,12 +2368,24 @@
           <span class="pill">Programa aprofundado</span>
         </div>
 
-        <div class="hero-copy">
-          <div class="eyebrow">Método Equilíbrio Vital<sup style="font-size:.7em">®</sup></div>
-          <h1>Entenda por que o seu corpo mudou depois dos 40 e aprenda a reconstruir o seu <em>equilíbrio</em>, para
-            parar de viver em tentativa e erro com a própria saúde.</h1>
-          <p class="hero-lead">Aprenda como cada sinal do seu corpo se conecta e o que fazer, na prática, para sair do
-            estado de alerta e voltar a ter energia, sono e clareza de forma que se sustenta.</p>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">Método Equilíbrio Vital<sup style="font-size:.7em">®</sup></div>
+            <h1>Entenda por que o seu corpo mudou depois dos 40 e aprenda a reconstruir o seu <em>equilíbrio</em>,
+              para parar de viver em tentativa e erro com a própria saúde.</h1>
+            <p class="hero-lead">Aprenda como cada sinal do seu corpo se conecta e o que fazer, na prática, para sair
+              do estado de alerta e voltar a ter energia, sono e clareza de forma que se sustenta.</p>
+            <ul class="trust">
+              <li>Acesso imediato</li>
+              <li>Compra 100% segura</li>
+              <li>Garantia de X dias</li>
+            </ul>
+          </div>
+          <div class="hero-portrait">
+            <img src="../assets/sayuri-ev-hero.webp" alt="Sayuri de Sousa" loading="eager">
+            <div class="portrait-chip"><b>Sayuri de Sousa</b><span>Medicina Oriental &amp; Nutrição
+                Funcional</span></div>
+          </div>
         </div>
 
         <div class="vsl" id="vsl">
@@ -2285,11 +2399,6 @@
 
         <div class="hero-cta">
           <a class="cta" href="#oferta" data-checkout>Quero entender o meu corpo de verdade</a>
-          <ul class="trust">
-            <li>Acesso imediato</li>
-            <li>Compra 100% segura</li>
-            <li>Garantia de X dias</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -2615,8 +2724,11 @@
         <div class="offer-box">
           <div class="offer-top">
             <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
-            <span class="tag">Acesso imediato</span>
-            <h3>O programa completo, com as aulas aprofundadas e os 5 bônus:</h3>
+            <div class="offer-photo"><img src="../assets/sayuri-ev-oferta.webp" alt="Sayuri de Sousa" loading="lazy"></div>
+            <div>
+              <span class="tag">Acesso imediato</span>
+              <h3>O programa completo, com as aulas aprofundadas e os 5 bônus:</h3>
+            </div>
           </div>
           <div class="offer-body">
             <ul class="offer-list">
