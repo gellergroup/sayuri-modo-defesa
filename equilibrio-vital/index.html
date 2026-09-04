@@ -555,12 +555,25 @@
       align-items: start;
     }
 
-    .tries h2 {
-      margin: 16px 0 0;
-      font-size: clamp(34px, 4.4vw, 52px);
-      line-height: 1.06;
+    .tries-head {
       position: sticky;
       top: 90px;
+    }
+
+    .tries h2 {
+      margin: 16px 0 28px;
+      font-size: clamp(34px, 4.4vw, 52px);
+      line-height: 1.06;
+    }
+
+    .tries p.big-question {
+      margin: 0 0 26px;
+      color: var(--violet);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(26px, 3vw, 34px);
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.3;
     }
 
     .tries-list {
@@ -1059,16 +1072,10 @@
     }
 
     /* ---------- PRESENTES ---------- */
-    .gifts-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 72px;
-      align-items: start;
-    }
-
     .gifts-head {
-      position: sticky;
-      top: 90px;
+      max-width: 720px;
+      margin: 0 auto 44px;
+      text-align: center;
     }
 
     .gift-icon {
@@ -1076,7 +1083,7 @@
       place-items: center;
       width: 64px;
       height: 64px;
-      margin-bottom: 22px;
+      margin: 0 auto 22px;
       border-radius: 18px;
       background: linear-gradient(135deg, var(--accent-bright), var(--accent-deep));
       color: #fff;
@@ -1096,25 +1103,77 @@
 
     .gifts {
       display: grid;
-      gap: 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
       margin: 0;
       padding: 0;
       list-style: none;
-      border-top: 1px solid var(--border);
     }
 
     .gift {
       display: grid;
-      grid-template-columns: 70px 1fr;
-      gap: 20px;
-      padding: 28px 0;
-      border-bottom: 1px solid var(--border);
-      transition: background .3s ease, padding-left .3s ease;
+      grid-template-columns: 64px 1fr;
+      gap: 18px;
+      padding: 30px 30px 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, #ffffff, #f3f8f4);
+      box-shadow: 0 8px 30px rgba(20, 42, 33, .045), inset 0 1px 0 rgba(255, 255, 255, .6);
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
     }
 
     .gift:hover {
-      background: rgba(220, 239, 227, .35);
-      padding-left: 12px;
+      transform: translateY(-4px);
+      border-color: rgba(62, 156, 112, .55);
+      box-shadow: 0 16px 44px rgba(20, 42, 33, .09), 0 0 26px rgba(62, 156, 112, .16);
+    }
+
+    .gift-cta {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      gap: 18px;
+      padding: 34px 30px;
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, var(--forest, #163d2e), var(--dark-3));
+      color: var(--on-dark);
+      text-align: center;
+      box-shadow: 0 24px 60px rgba(20, 42, 33, .22);
+    }
+
+    .gift-cta .mandala {
+      right: -110px;
+      top: -110px;
+      width: 320px;
+      height: 320px;
+      color: #fff;
+      opacity: .08;
+    }
+
+    .gift-cta .kicker {
+      display: block;
+      color: var(--accent-bright);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+
+    .gift-cta strong {
+      display: block;
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 30px;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.2;
+    }
+
+    .gift-cta .cta {
+      width: 100%;
+      max-width: 360px;
     }
 
     .gift .num {
@@ -1225,7 +1284,7 @@
       padding: 96px 72px 96px 64px;
     }
 
-    .about-copy .signature {
+    .about-copy p.signature {
       margin: 14px 0 6px;
       color: var(--accent-bright);
       font-family: "Cormorant Garamond", Georgia, serif;
@@ -1371,14 +1430,47 @@
       font-size: 12px;
     }
 
+    .carousel-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      margin-top: 6px;
+    }
+
     .carousel-hint {
-      margin: 6px 0 0;
+      margin: 0;
       color: var(--muted);
       font-size: 11px;
       font-weight: 700;
       letter-spacing: .16em;
       text-transform: uppercase;
       text-align: center;
+    }
+
+    .carousel-btn {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(62, 156, 112, .45);
+      background: #fff;
+      color: var(--accent-deep);
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .carousel-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .carousel-btn svg {
+      width: 18px;
+      height: 18px;
     }
 
     /* ---------- OFERTA ---------- */
@@ -1847,21 +1939,19 @@
       .tries-grid,
       .name-grid,
       .chain-grid,
-      .gifts-grid,
       .faq-grid,
       .about-grid,
-      .offer-body {
+      .offer-body,
+      .gifts {
         grid-template-columns: 1fr;
       }
 
-      .tries h2,
-      .gifts-head,
+      .tries-head,
       .faq-head {
         position: static;
       }
 
       .tries-grid,
-      .gifts-grid,
       .faq-grid {
         gap: 36px;
       }
@@ -2207,9 +2297,10 @@
     <!-- ================= TENTATIVAS ================= -->
     <section class="section tries">
       <div class="wrap tries-grid">
-        <div>
+        <div class="tries-head">
           <div class="eyebrow">O ciclo que você conhece</div>
           <h2>Cada coisa ajudou um pouco, mas, depois de um tempo, <em>tudo voltou.</em></h2>
+          <div class="cycle" aria-hidden="true">tentar<i></i>melhorar um pouco<i></i>estaca zero</div>
         </div>
         <div>
           <ul class="tries-list">
@@ -2223,7 +2314,6 @@
             em um pedaço isolado, enquanto o problema estava na forma como os pedaços conversam entre si.</p>
           <p>Enquanto ninguém olha para essa conversa, você fica presa num ciclo de tentar, melhorar um pouco e voltar
             para a estaca zero.</p>
-          <div class="cycle" aria-hidden="true">tentar<i></i>melhorar um pouco<i></i>estaca zero</div>
         </div>
       </div>
     </section>
@@ -2383,11 +2473,10 @@
 
     <!-- ================= PRESENTES ================= -->
     <section class="section alt">
-      <div class="wrap gifts-grid">
+      <div class="wrap">
         <div class="gifts-head">
           <div class="gift-icon" aria-hidden="true"><svg><use href="#gift" /></svg></div>
           <h2>E mais 5 presentes <em>selecionados a dedo.</em></h2>
-          <a class="cta" href="#oferta" data-checkout>Quero o programa completo + os bônus</a>
         </div>
         <ul class="gifts">
           <li class="gift"><span class="num">1</span>
@@ -2424,6 +2513,14 @@
               <p>Uma aula extra dedicada a ler os sinais dessa fase da vida, para você seguir interpretando o próprio
                 corpo mesmo depois de terminar o programa.</p>
             </div>
+          </li>
+          <li class="gift-cta">
+            <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+            <div>
+              <span class="kicker">Acesso imediato</span>
+              <strong>O programa completo, com as aulas aprofundadas e os 5 bônus.</strong>
+            </div>
+            <a class="cta" href="#oferta" data-checkout>Quero o programa completo + os bônus</a>
           </li>
         </ul>
       </div>
@@ -2496,7 +2593,11 @@
             <div class="who"><span class="avatar"></span><div><b>Nome</b><span>idade · cidade</span></div></div>
           </article>
         </div>
-        <p class="carousel-hint">Arraste para ver mais</p>
+        <div class="carousel-bar">
+          <button class="carousel-btn" type="button" data-carousel="-1" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7" /></svg></button>
+          <p class="carousel-hint">Arraste ou use as setas</p>
+          <button class="carousel-btn" type="button" data-carousel="1" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7" /></svg></button>
+        </div>
         <div class="center-cta"><a class="cta" href="#oferta" data-checkout>Quero começar essa jornada</a></div>
       </div>
     </section>
@@ -2519,7 +2620,7 @@
           </div>
           <div class="offer-body">
             <ul class="offer-list">
-              <li><span class="ck"><svg><use href="#check" /></svg></span>Método Equilíbrio Vital® completo — as 6 etapas com aulas aprofundadas</li>
+              <li><span class="ck"><svg><use href="#check" /></svg></span>Programa completo, com as aulas aprofundadas</li>
               <li><span class="ck"><svg><use href="#check" /></svg></span>Mapa de Equilíbrio Vital</li>
               <li><span class="ck"><svg><use href="#check" /></svg></span>Guia de Alimentação para o Modo Defesa</li>
               <li><span class="ck"><svg><use href="#check" /></svg></span>Guia de Rotinas de Recuperação</li>
@@ -2566,7 +2667,6 @@
         <div class="faq-head">
           <div class="eyebrow">Perguntas frequentes</div>
           <h2>Ainda com dúvidas?</h2>
-          <p>As respostas para o que mais chega antes de entrar no programa.</p>
         </div>
         <div class="faq">
           <details>
@@ -2664,8 +2764,18 @@
       }, { threshold: 0.05 }).observe(hero);
     }
 
+    // Setas do carrossel de depoimentos
+    const carousel = document.querySelector('.carousel');
+    document.querySelectorAll('[data-carousel]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const card = carousel.querySelector('.testimonial');
+        const step = card ? card.getBoundingClientRect().width + 18 : 400;
+        carousel.scrollBy({ left: step * Number(btn.dataset.carousel), behavior: 'smooth' });
+      });
+    });
+
     // Reveal ao rolar
-    const revealItems = document.querySelectorAll('.tries-list li,.contrast,.chain li,.tl-card,.pillar,.gift,.testimonial,.offer-box,.certificate-inner');
+    const revealItems = document.querySelectorAll('.tries-list li,.contrast,.chain li,.tl-card,.pillar,.gift,.gift-cta,.testimonial,.offer-box,.certificate-inner');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     revealItems.forEach((item, index) => {
       item.classList.add('reveal-item', index % 2 === 0 ? 'reveal-left' : 'reveal-right');

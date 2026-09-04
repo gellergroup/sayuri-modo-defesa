@@ -26,6 +26,14 @@ Tipografia: **Cormorant Garamond** (títulos, itálicos de acento, assinatura �
 
 > O roxo foi estimado a partir da imagem da logo. Ao receber o arquivo PNG/SVG, conferir o hex exato e ajustar `--violet` no `:root`.
 
+## Passada de UX (2026-09-03, após revisão da Priscila no desktop)
+- Corrigida especificidade de CSS que encolhia destaques: pergunta grande em itálico (EV), assinatura "Sayuri de Sousa" (Reset, sobre e final), frase dos "luxos" na seção Modo Defesa (Reset), assinatura no sobre (EV)
+- Presentes (EV): saiu o layout coluna vazia + lista; agora título centralizado e 6 cards em 2 colunas (5 presentes + card verde de CTA)
+- Tentativas (EV): pílula do ciclo subiu pra coluna do título, que fica fixa ao rolar
+- Depoimentos (EV): setas anterior/próximo no carrossel (desktop não consegue arrastar com mouse)
+- Obrigado EV: coluna do título centralizada verticalmente em relação ao card do formulário; mandala reposicionada
+- Removidas duas linhas que não estavam na copy (subtítulo do FAQ e item da lista da oferta com travessão)
+
 ## O que está pronto
 - Estrutura completa no padrão Geller (modelo Aline): hero com headline + foto + CTA, VSL, dor, Modo Defesa (seção escura), por que nada resolveu (2 linguagens), método em 4 etapas, conteúdo + 4 bônus, sobre, depoimentos, faixa rolante, oferta com price-card, garantia com selo, FAQ accordion, CTA final, rodapé com disclaimer
 - Copy do copywriter mantida na íntegra (só espaçamento "Não.O" corrigido)
