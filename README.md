@@ -6,7 +6,7 @@
 - `index.html` — página completa (CSS + JS inline, sem dependência além do Google Fonts)
 - `assets/` — vazio por enquanto. Esperado: `sayuri-hero.webp`, `sayuri-sobre.webp`, `og-modo-defesa.jpg`, logo
 - Cópia para deploy: `EQUIPE GELLER/arquivos-para-deploy/sayuri-modo-defesa/index.html`
-- Repositório: `gellergroup/sayuri-modo-defesa` (GitHub Pages para preview)
+- Repositório: `gellergroup/sayuri-modo-defesa` (só histórico de código — sem GitHub Pages, por decisão da Priscila)
 
 ## Paleta proposta (para validação)
 | Token | Hex | Uso |
