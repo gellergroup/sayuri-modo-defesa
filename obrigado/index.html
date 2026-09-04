@@ -34,7 +34,7 @@
       --ink: #24102f;
       --text: #3d2f4a;
       --muted: #6b5d78;
-      --violet: #4a1a6b;
+      --violet: #480070;
       --violet-mid: #6a3a99;
       --violet-deep: #2e0f45;
       --violet-soft: #e9ddf2;
@@ -309,7 +309,7 @@
       color: var(--violet);
     }
 
-    .brand svg {
+    .brand svg, .brand img {
       width: 34px;
       height: 34px;
     }
@@ -1153,41 +1153,7 @@
   <!-- Google Tag Manager (noscript) — PENDENTE -->
 
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="mandala" viewBox="-100 -100 200 200">
-      <g fill="currentColor">
-        <g id="petal">
-          <ellipse cx="0" cy="-36" rx="5.5" ry="21" />
-        </g>
-        <use href="#petal" transform="rotate(22.5)" />
-        <use href="#petal" transform="rotate(45)" />
-        <use href="#petal" transform="rotate(67.5)" />
-        <use href="#petal" transform="rotate(90)" />
-        <use href="#petal" transform="rotate(112.5)" />
-        <use href="#petal" transform="rotate(135)" />
-        <use href="#petal" transform="rotate(157.5)" />
-        <use href="#petal" transform="rotate(180)" />
-        <use href="#petal" transform="rotate(202.5)" />
-        <use href="#petal" transform="rotate(225)" />
-        <use href="#petal" transform="rotate(247.5)" />
-        <use href="#petal" transform="rotate(270)" />
-        <use href="#petal" transform="rotate(292.5)" />
-        <use href="#petal" transform="rotate(315)" />
-        <use href="#petal" transform="rotate(337.5)" />
-        <g id="arm">
-          <ellipse cx="0" cy="-64" rx="6" ry="9" />
-          <circle cx="0" cy="-80" r="3.2" />
-          <circle cx="0" cy="-92" r="2" />
-        </g>
-        <use href="#arm" transform="rotate(45)" />
-        <use href="#arm" transform="rotate(90)" />
-        <use href="#arm" transform="rotate(135)" />
-        <use href="#arm" transform="rotate(180)" />
-        <use href="#arm" transform="rotate(225)" />
-        <use href="#arm" transform="rotate(270)" />
-        <use href="#arm" transform="rotate(315)" />
-        <circle cx="0" cy="0" r="4" />
-      </g>
-    </symbol>
+    <symbol id="mandala" viewBox="-100 -100 200 200"><image href="../assets/logo-mandala.png" x="-100" y="-100" width="200" height="200" /></symbol>
     <symbol id="check" viewBox="0 0 24 24">
       <path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
         stroke-linejoin="round" />
@@ -1206,7 +1172,7 @@
       <div class="wrap">
         <div class="brand-bar">
           <a class="brand" href="#" aria-label="Sayuri de Sousa">
-            <svg aria-hidden="true"><use href="#mandala" /></svg>
+            <img src="../assets/logo-mandala.png" alt="" width="34" height="34">
             <span><b>Sayuri de Sousa</b><small>Medicina Oriental &amp; Nutrição Funcional</small></span>
           </a>
           <span class="pill">Compra confirmada</span>
