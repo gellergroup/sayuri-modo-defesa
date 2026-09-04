@@ -1,0 +1,2690 @@
+<!doctype html>
+<html lang="pt-BR">
+<!--
+  PÁGINA: Página de vendas — Método Equilíbrio Vital® (produto 02, pós-Reset)
+  CLIENTE: Sayuri de Sousa (via Geller Group) — clientes/geller/clientes/sayuri/
+  NICHO: Medicina oriental + nutrição funcional — mulheres 40–65 (perimenopausa/menopausa/pós)
+  OBJETIVO: Conversão para o programa aprofundado (preço a definir) — tráfego pago e upsell
+  DIAGRAMAÇÃO: layout NOVO em relação à página do Reset, mesma paleta/tipografia: abertura escura com a VSL dentro do
+               hero, "cadeia" visual dos sintomas, método em linha do tempo, presentes em lista editorial, sobre com
+               foto sangrada, depoimentos em carrossel, cabeçalho fixo com barra de progresso de leitura
+  STATUS: v1 — aguardando validação
+  PENDÊNCIAS: fotos da Sayuri (hero/sobre), VSL, preços (US$ X / X vezes), dias de garantia (X), "Acesso por X",
+              link de checkout, depoimentos reais, GTM/Pixel. Ver README.md na pasta acima
+  HUMANIZER: copy mantida na íntegra; zero emojis (❌ e 🎁 viraram ícones SVG); sem foto de banco de imagem
+-->
+
+<head>
+  <!-- Google Tag Manager — PENDENTE -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Método Equilíbrio Vital | Sayuri de Sousa</title>
+  <meta name="description"
+    content="Entenda por que o seu corpo mudou depois dos 40 e aprenda a reconstruir o seu equilíbrio, para parar de viver em tentativa e erro com a própria saúde.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Método Equilíbrio Vital — Sayuri de Sousa">
+  <meta property="og:description"
+    content="Entenda por que o seu corpo mudou depois dos 40 e aprenda a reconstruir o seu equilíbrio.">
+  <meta property="og:image" content="../assets/og-equilibrio-vital.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbfdfb;
+      --surface: #ffffff;
+      --surface-2: #f1f7f3;
+      --ink: #142a21;
+      --text: #2f4a3d;
+      --muted: #5f7a6c;
+      --violet: #4a1a6b;
+      --violet-mid: #6a3a99;
+      --violet-deep: #163d2e;
+      --violet-night: #0f2a20;
+      --dark-3: #1f5a43;
+      --violet-soft: #dcefe3;
+      --violet-glow: rgba(62, 156, 112, .14);
+      --accent: #3e9c70;
+      --accent-bright: #7fcba0;
+      --accent-deep: #2a7352;
+      --accent-glow: rgba(62, 156, 112, .30);
+      --on-dark: #ecf5ef;
+      --on-dark-muted: #b9d4c4;
+      --border: rgba(31, 90, 67, .12);
+      --border-dark: rgba(127, 203, 160, .22);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Manrope, "Segoe UI", sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      text-wrap: balance;
+    }
+
+    h1 em,
+    h2 em,
+    h3 em {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--violet);
+    }
+
+    p {
+      line-height: 1.75;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .narrow {
+      max-width: 780px;
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 104px 0;
+    }
+
+    .section.alt {
+      background: var(--surface-2);
+    }
+
+    .section.dark {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: linear-gradient(170deg, var(--violet-night) 0%, var(--violet-deep) 45%, var(--dark-3) 100%);
+      color: var(--on-dark);
+    }
+
+    .section.dark h2,
+    .section.dark h3 {
+      color: #fff;
+    }
+
+    .section.dark h2 em,
+    .section.dark h3 em {
+      color: var(--accent-bright);
+    }
+
+    .section.dark p {
+      color: var(--on-dark-muted);
+    }
+
+    .section.dark .eyebrow {
+      color: var(--accent-bright);
+    }
+
+    .mandala {
+      position: absolute;
+      z-index: -1;
+      color: currentColor;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--violet-mid);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .eyebrow.center {
+      justify-content: center;
+    }
+
+    .eyebrow.center::after {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .cta {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      min-height: 60px;
+      padding: 18px 34px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-deep) 70%, #235f44);
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: .05em;
+      line-height: 1.3;
+      text-align: center;
+      text-transform: uppercase;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 16px 38px var(--accent-glow);
+      transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 22px 46px rgba(62, 156, 112, .42);
+    }
+
+    .cta:focus-visible {
+      outline: 3px solid var(--violet-mid);
+      outline-offset: 3px;
+    }
+
+    .cta-note {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .section.dark .cta-note {
+      color: var(--on-dark-muted);
+    }
+
+    .center-cta {
+      margin-top: 48px;
+      text-align: center;
+    }
+
+    /* ---------- Barra de progresso + cabeçalho fixo ---------- */
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 90;
+      width: 100%;
+      height: 3px;
+      background: transparent;
+      pointer-events: none;
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent-bright), var(--accent-deep));
+      transition: width .1s linear;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 80;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 24px;
+      background: rgba(251, 253, 251, .92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      transform: translateY(-110%);
+      transition: transform .3s ease;
+    }
+
+    .topbar.visible {
+      transform: none;
+    }
+
+    .topbar .brand b {
+      font-size: 20px;
+    }
+
+    .topbar .cta {
+      min-height: 44px;
+      padding: 12px 22px;
+      font-size: 12px;
+      box-shadow: 0 8px 20px var(--accent-glow);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--violet);
+    }
+
+    .brand svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .brand b {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 1px;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--violet-mid);
+    }
+
+    /* ---------- HERO (escuro, VSL dentro) ---------- */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 30px 0 96px;
+      background: radial-gradient(circle at 50% -10%, rgba(127, 203, 160, .18), transparent 40%), linear-gradient(175deg, var(--violet-night), var(--violet-deep) 55%, var(--dark-3));
+      color: var(--on-dark);
+    }
+
+    .hero .mandala.big {
+      top: 40px;
+      left: 50%;
+      width: 1100px;
+      height: 1100px;
+      transform: translateX(-50%);
+      color: #fff;
+      opacity: .045;
+    }
+
+    .hero .mandala.gold {
+      right: -180px;
+      bottom: -240px;
+      width: 560px;
+      height: 560px;
+      color: var(--accent-bright);
+      opacity: .07;
+    }
+
+    .hero .brand {
+      color: var(--accent-bright);
+    }
+
+    .hero .brand b {
+      color: #fff;
+    }
+
+    .hero .brand small {
+      color: var(--accent-bright);
+    }
+
+    .hero-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 64px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .hero-bar .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid var(--border-dark);
+      border-radius: 50px;
+      color: var(--on-dark-muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .hero-bar .pill::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-bright);
+      box-shadow: 0 0 0 4px rgba(127, 203, 160, .2);
+    }
+
+    .hero-copy {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero .eyebrow {
+      justify-content: center;
+      color: var(--accent-bright);
+      margin-bottom: 22px;
+    }
+
+    .hero .eyebrow::after {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .hero h1 {
+      margin: 0 auto 22px;
+      color: #fff;
+      font-size: clamp(38px, 5.4vw, 66px);
+      line-height: 1.02;
+    }
+
+    .hero h1 em {
+      color: var(--accent-bright);
+    }
+
+    .hero-lead {
+      max-width: 720px;
+      margin: 0 auto 40px;
+      color: var(--on-dark-muted);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .vsl {
+      position: relative;
+      max-width: 920px;
+      margin: 0 auto 34px;
+      aspect-ratio: 16 / 9;
+      border-radius: 22px;
+      overflow: hidden;
+      background: linear-gradient(160deg, #0b1f18, var(--violet-deep) 70%);
+      box-shadow: 0 40px 100px rgba(0, 0, 0, .45), 0 0 0 1px rgba(127, 203, 160, .35), 0 0 80px rgba(62, 156, 112, .12);
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+    }
+
+    .vsl .mandala {
+      width: 70%;
+      height: 70%;
+      color: #fff;
+      opacity: .07;
+    }
+
+    .vsl iframe,
+    .vsl video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .vsl-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      justify-items: center;
+    }
+
+    .vsl-play {
+      display: grid;
+      place-items: center;
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-bright), var(--accent-deep));
+      box-shadow: 0 16px 40px rgba(62, 156, 112, .45), 0 0 0 14px rgba(127, 203, 160, .12);
+      animation: pulse 2.6s ease-in-out infinite;
+    }
+
+    .vsl-play::after {
+      content: "";
+      margin-left: 6px;
+      border-style: solid;
+      border-width: 15px 0 15px 26px;
+      border-color: transparent transparent transparent #fff;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 16px 40px rgba(62, 156, 112, .45), 0 0 0 14px rgba(127, 203, 160, .12);
+      }
+
+      50% {
+        box-shadow: 0 16px 40px rgba(62, 156, 112, .45), 0 0 0 26px rgba(127, 203, 160, .04);
+      }
+    }
+
+    .vsl-label {
+      margin-top: 22px;
+      color: var(--on-dark-muted);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+
+    .hero-cta {
+      text-align: center;
+    }
+
+    .hero-cta .cta {
+      min-width: 360px;
+    }
+
+    .trust {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 26px;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--on-dark-muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .trust li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust li::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent-bright);
+    }
+
+    /* ---------- TENTATIVAS ---------- */
+    .tries-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .tries h2 {
+      margin: 16px 0 0;
+      font-size: clamp(34px, 4.4vw, 52px);
+      line-height: 1.06;
+      position: sticky;
+      top: 90px;
+    }
+
+    .tries-list {
+      margin: 0 0 30px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0;
+    }
+
+    .tries-list li {
+      position: relative;
+      padding: 16px 0 16px 42px;
+      border-bottom: 1px dashed rgba(31, 90, 67, .18);
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .tries-list li::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 26px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      background: #fff;
+    }
+
+    .tries-list li::after {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: 40px;
+      bottom: -18px;
+      width: 2px;
+      background: linear-gradient(var(--accent), transparent);
+    }
+
+    .tries-list li:last-child::after {
+      display: none;
+    }
+
+    .big-question {
+      margin: 0 0 26px;
+      color: var(--violet);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(26px, 3vw, 34px);
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .tries p {
+      color: var(--text);
+      font-size: 16.5px;
+    }
+
+    .cycle {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 8px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .cycle i {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* ---------- NOME vs CAMINHO ---------- */
+    .name-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .name-copy h2 {
+      margin: 16px 0 22px;
+      font-size: clamp(34px, 4.4vw, 50px);
+      line-height: 1.06;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      font-weight: 700;
+    }
+
+    .name-copy p {
+      color: var(--text);
+      font-size: 16.5px;
+    }
+
+    .contrast {
+      display: grid;
+      gap: 0;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 30px 70px rgba(20, 42, 33, .18);
+    }
+
+    .contrast div {
+      padding: 40px 38px;
+    }
+
+    .contrast .a {
+      background: linear-gradient(150deg, #ffffff, #eaf3ed);
+      color: var(--ink);
+    }
+
+    .contrast .b {
+      background: linear-gradient(160deg, var(--violet-deep), var(--dark-3));
+      color: #fff;
+    }
+
+    .contrast small {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--violet-mid);
+    }
+
+    .contrast .b small {
+      color: var(--accent-bright);
+    }
+
+    .contrast strong {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(26px, 2.8vw, 34px);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .contrast .b strong {
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    /* ---------- CADEIA (escuro) ---------- */
+    .chain-section .mandala {
+      left: -260px;
+      top: 50%;
+      width: 760px;
+      height: 760px;
+      transform: translateY(-50%);
+      opacity: .05;
+    }
+
+    .chain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .chain-copy h2 {
+      margin: 16px 0 22px;
+      font-size: clamp(34px, 4.4vw, 50px);
+      line-height: 1.06;
+    }
+
+    .chain-copy p {
+      font-size: 16.5px;
+    }
+
+    .chain-copy p.lead {
+      color: var(--on-dark);
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .chain {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .chain li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      border: 1px solid var(--border-dark);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .05);
+      backdrop-filter: blur(4px);
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .chain li .link {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(127, 203, 160, .14);
+      color: var(--accent-bright);
+    }
+
+    .chain li .link svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .chain li::after {
+      content: "";
+      position: absolute;
+      left: 43px;
+      bottom: -15px;
+      width: 2px;
+      height: 15px;
+      background: var(--accent-bright);
+      opacity: .6;
+    }
+
+    .chain li:last-child::after {
+      display: none;
+    }
+
+    .chain li:last-child {
+      border-color: rgba(127, 203, 160, .5);
+      background: rgba(127, 203, 160, .08);
+    }
+
+    .root-cause {
+      margin: 30px 0 0;
+      padding: 24px 28px;
+      border-left: 3px solid var(--accent-bright);
+      background: rgba(255, 255, 255, .06);
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 23px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.4;
+      border-radius: 0 12px 12px 0;
+    }
+
+    /* ---------- MÉTODO — LINHA DO TEMPO ---------- */
+    .method-head {
+      max-width: 820px;
+      margin: 0 auto 64px;
+      text-align: center;
+    }
+
+    .method-head h2 {
+      margin: 16px 0 18px;
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 1.04;
+    }
+
+    .method-head p {
+      color: var(--text);
+      font-size: 17px;
+    }
+
+    .method-head p strong {
+      color: var(--ink);
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 10px 0;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(var(--violet-soft), var(--accent), var(--violet-soft));
+      transform: translateX(-50%);
+    }
+
+    .tl-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 80px;
+      margin-bottom: 36px;
+    }
+
+    .tl-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .tl-item .dot {
+      position: absolute;
+      left: 50%;
+      top: 26px;
+      width: 58px;
+      height: 58px;
+      transform: translateX(-50%);
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-bright), var(--accent-deep));
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+      box-shadow: 0 0 0 8px var(--bg), 0 12px 30px var(--accent-glow);
+      z-index: 2;
+    }
+
+    .tl-card {
+      padding: 30px 32px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, #ffffff, #f3f8f4);
+    }
+
+    .tl-item:nth-child(odd) .tl-card {
+      grid-column: 1;
+      text-align: right;
+    }
+
+    .tl-item:nth-child(even) .tl-card {
+      grid-column: 2;
+    }
+
+    .tl-card .kicker {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent-deep);
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .tl-card h3 {
+      margin: 0 0 12px;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .tl-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.7;
+    }
+
+    .sequence {
+      max-width: 820px;
+      margin: 64px auto 0;
+      padding: 28px 32px;
+      border: 1px solid rgba(62, 156, 112, .4);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(127, 203, 160, .12), rgba(220, 239, 227, .35));
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    /* ---------- MARQUEE ---------- */
+    .marquee {
+      overflow: hidden;
+      padding: 22px 0;
+      border-top: 1px solid rgba(62, 156, 112, .35);
+      border-bottom: 1px solid rgba(62, 156, 112, .35);
+      background: var(--surface-2);
+      color: var(--violet);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 36s linear infinite;
+    }
+
+    .marquee-track span {
+      display: inline-flex;
+      align-items: center;
+      gap: 26px;
+      padding-right: 26px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .marquee-track span::after {
+      content: "+";
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    @keyframes marquee {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ---------- O QUE VAI APRENDER — PILARES ---------- */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .pillar {
+      position: relative;
+      padding: 40px 34px 40px 0;
+      border-right: 1px solid var(--border);
+    }
+
+    .pillar:nth-child(2) {
+      padding-left: 34px;
+    }
+
+    .pillar:last-child {
+      border-right: 0;
+      padding-left: 34px;
+      padding-right: 0;
+    }
+
+    .pillar::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 64px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-bright), var(--accent-deep));
+    }
+
+    .pillar:nth-child(2)::before,
+    .pillar:last-child::before {
+      left: 34px;
+    }
+
+    .pillar .num {
+      display: block;
+      margin-bottom: 16px;
+      color: var(--accent);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+
+    .pillar h3 {
+      margin: 0 0 14px;
+      font-size: 32px;
+      line-height: 1.1;
+    }
+
+    .pillar p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ---------- PRESENTES ---------- */
+    .gifts-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .gifts-head {
+      position: sticky;
+      top: 90px;
+    }
+
+    .gift-icon {
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      margin-bottom: 22px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--accent-bright), var(--accent-deep));
+      color: #fff;
+      box-shadow: 0 14px 34px var(--accent-glow);
+    }
+
+    .gift-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .gifts-head h2 {
+      margin: 0 0 16px;
+      font-size: clamp(34px, 4.2vw, 48px);
+      line-height: 1.06;
+    }
+
+    .gifts {
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--border);
+    }
+
+    .gift {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 20px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+      transition: background .3s ease, padding-left .3s ease;
+    }
+
+    .gift:hover {
+      background: rgba(220, 239, 227, .35);
+      padding-left: 12px;
+    }
+
+    .gift .num {
+      color: var(--accent);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .gift small {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--violet-mid);
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .gift h3 {
+      margin: 0 0 8px;
+      font-size: 25px;
+      line-height: 1.15;
+    }
+
+    .gift p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    /* ---------- SOBRE (escuro, foto sangrada) ---------- */
+    .about-section {
+      padding: 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      min-height: 680px;
+    }
+
+    .about-photo {
+      position: relative;
+      min-height: 520px;
+      overflow: hidden;
+      background: linear-gradient(165deg, #12352a, var(--dark-3) 55%, #2f7d5b);
+      isolation: isolate;
+    }
+
+    .about-photo .mandala {
+      inset: auto;
+      left: 50%;
+      top: 50%;
+      width: 80%;
+      height: 80%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      opacity: .10;
+    }
+
+    .about-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .about-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(90deg, transparent 60%, var(--violet-deep));
+      pointer-events: none;
+    }
+
+    .photo-placeholder {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      text-align: center;
+      color: rgba(255, 255, 255, .82);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      line-height: 1.7;
+      text-transform: uppercase;
+    }
+
+    .photo-placeholder b {
+      display: block;
+      margin-bottom: 6px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 0;
+      text-transform: none;
+      color: #fff;
+    }
+
+    .about-copy {
+      padding: 96px 72px 96px 64px;
+    }
+
+    .about-copy .signature {
+      margin: 14px 0 6px;
+      color: var(--accent-bright);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 42px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .about-copy h2 {
+      margin: 0 0 22px;
+      font-size: clamp(34px, 4.2vw, 48px);
+      line-height: 1.06;
+    }
+
+    .about-copy p {
+      font-size: 15.5px;
+    }
+
+    .about-copy .quote-gold {
+      margin: 22px 0 30px;
+      padding: 22px 26px;
+      border-left: 3px solid var(--accent-bright);
+      background: rgba(255, 255, 255, .06);
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 23px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.4;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .creds {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 30px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .creds li {
+      padding: 10px 16px;
+      border: 1px solid var(--border-dark);
+      border-radius: 50px;
+      background: rgba(255, 255, 255, .06);
+      color: var(--on-dark);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* ---------- DEPOIMENTOS — CARROSSEL ---------- */
+    .carousel {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: min(420px, 82%);
+      gap: 18px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 6px 6px 22px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent) transparent;
+    }
+
+    .carousel::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .carousel::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 6px;
+    }
+
+    .testimonial {
+      position: relative;
+      scroll-snap-align: start;
+      padding: 36px 30px 30px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(150deg, #ffffff, #f4f9f5);
+    }
+
+    .testimonial .qmark {
+      position: absolute;
+      top: 12px;
+      right: 24px;
+      color: var(--accent);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 78px;
+      line-height: 1;
+      opacity: .5;
+    }
+
+    .testimonial .stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+
+    .testimonial .stars svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .testimonial p {
+      margin: 0 0 20px;
+      color: var(--text);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 21px;
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .testimonial p.pending {
+      color: var(--violet-mid);
+      font-size: 17px;
+    }
+
+    .testimonial .who {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--violet-soft), var(--accent));
+      box-shadow: 0 0 0 3px #fff, 0 0 0 4px var(--border);
+    }
+
+    .testimonial .who b {
+      display: block;
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .testimonial .who span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .carousel-hint {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    /* ---------- OFERTA ---------- */
+    .offer-head {
+      max-width: 780px;
+      margin: 0 auto 44px;
+      text-align: center;
+    }
+
+    .offer-head h2 {
+      margin: 16px 0 18px;
+      font-size: clamp(36px, 4.8vw, 56px);
+      line-height: 1.04;
+    }
+
+    .offer-head p {
+      color: var(--text);
+      font-size: 17px;
+    }
+
+    .offer-head p strong {
+      color: var(--ink);
+    }
+
+    .offer-box {
+      max-width: 860px;
+      margin: 0 auto;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(20, 42, 33, .18), 0 0 0 1px rgba(62, 156, 112, .4);
+    }
+
+    .offer-top {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 36px 40px;
+      background: linear-gradient(135deg, var(--violet-night), var(--dark-3));
+      color: #fff;
+      text-align: center;
+    }
+
+    .offer-top .mandala {
+      right: -120px;
+      top: -140px;
+      width: 360px;
+      height: 360px;
+      color: #fff;
+      opacity: .08;
+    }
+
+    .offer-top .tag {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 16px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, var(--accent-bright), var(--accent));
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 20px var(--accent-glow);
+    }
+
+    .offer-top h3 {
+      margin: 0;
+      color: #fff;
+      font-size: clamp(24px, 2.8vw, 32px);
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.25;
+    }
+
+    .offer-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 44px 40px;
+      background: linear-gradient(170deg, #ffffff, #f6faf7);
+    }
+
+    .offer-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .offer-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .offer-list .ck {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      margin-top: 1px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-bright), var(--accent-deep));
+      color: #fff;
+    }
+
+    .offer-list .ck svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    .offer-price {
+      text-align: center;
+      padding: 10px 0;
+      border-left: 1px solid var(--border);
+    }
+
+    .offer-price .from {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      text-decoration: line-through;
+    }
+
+    .offer-price .price {
+      margin: 6px 0 2px;
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(56px, 6.6vw, 76px);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -.03em;
+    }
+
+    .offer-price .price small {
+      font-size: .42em;
+      font-weight: 600;
+      color: var(--violet);
+      vertical-align: super;
+      margin-right: 4px;
+    }
+
+    .offer-price .terms {
+      margin: 0 0 22px;
+      color: var(--violet);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .offer-price .cta {
+      width: 100%;
+    }
+
+    .safe {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 11.5px;
+      line-height: 1.6;
+    }
+
+    /* ---------- GARANTIA — CERTIFICADO ---------- */
+    .certificate {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      padding: 8px;
+      border: 1px solid rgba(62, 156, 112, .5);
+      border-radius: 22px;
+    }
+
+    .certificate-inner {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 44px 46px;
+      border: 1px solid rgba(62, 156, 112, .35);
+      border-radius: 16px;
+      background: linear-gradient(150deg, #ffffff, #f6faf7);
+    }
+
+    .seal {
+      display: grid;
+      place-items: center;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 36%, #fff, var(--violet-soft));
+      border: 3px solid #fff;
+      outline: 1px solid var(--accent);
+      outline-offset: 4px;
+      box-shadow: 0 18px 44px rgba(20, 42, 33, .16), 0 0 0 10px rgba(62, 156, 112, .10);
+      text-align: center;
+    }
+
+    .seal b {
+      display: block;
+      color: var(--violet);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: .9;
+    }
+
+    .seal span {
+      display: block;
+      margin-top: 6px;
+      color: var(--ink);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+
+    .certificate h2 {
+      margin: 12px 0 16px;
+      font-size: clamp(30px, 3.8vw, 40px);
+      line-height: 1.1;
+    }
+
+    .certificate p {
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .certificate p strong {
+      color: var(--ink);
+    }
+
+    /* ---------- FAQ — linhas ---------- */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .faq-head {
+      position: sticky;
+      top: 90px;
+    }
+
+    .faq-head h2 {
+      margin: 14px 0 16px;
+      font-size: clamp(34px, 4.2vw, 48px);
+      line-height: 1.06;
+    }
+
+    .faq-head p {
+      color: var(--muted);
+    }
+
+    .faq {
+      border-top: 1px solid var(--border);
+    }
+
+    details {
+      border-bottom: 1px solid var(--border);
+    }
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 24px 0;
+      cursor: pointer;
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.25;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--accent);
+      color: var(--accent-deep);
+      font-family: Manrope, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      transition: transform .25s ease, background .25s ease;
+    }
+
+    details[open] summary::after {
+      transform: rotate(45deg);
+      background: rgba(127, 203, 160, .18);
+    }
+
+    details p {
+      margin: 0 0 26px;
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+
+    /* ---------- FINAL ---------- */
+    .final {
+      padding: 120px 0;
+      text-align: center;
+    }
+
+    .final .mandala {
+      left: 50%;
+      top: 50%;
+      width: 820px;
+      height: 820px;
+      transform: translate(-50%, -50%);
+      opacity: .06;
+    }
+
+    .final h2 {
+      max-width: 880px;
+      margin: 16px auto 22px;
+      font-size: clamp(36px, 5.2vw, 60px);
+      line-height: 1.04;
+    }
+
+    .final p {
+      max-width: 640px;
+      margin: 0 auto 34px;
+      font-size: 17px;
+    }
+
+    .final .signature {
+      margin-top: 40px;
+      color: var(--accent-bright);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 40px;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      text-align: center;
+      font-size: 11.5px;
+      line-height: 1.7;
+    }
+
+    footer b {
+      color: var(--violet);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .mobile-cta {
+      display: none;
+    }
+
+    /* ---------- Camada premium ---------- */
+    .tl-card,
+    .testimonial,
+    .contrast,
+    .offer-box,
+    .certificate-inner {
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+
+    .tl-card:hover,
+    .testimonial:hover {
+      transform: translateY(-4px);
+      border-color: rgba(62, 156, 112, .55);
+      box-shadow: 0 16px 44px rgba(20, 42, 33, .09), 0 0 26px rgba(62, 156, 112, .16);
+    }
+
+    .reveal-item {
+      opacity: 0;
+      transform: translate3d(var(--reveal-x, 0), 26px, 0);
+      transition: opacity .72s ease, transform .72s cubic-bezier(.2, .72, .18, 1), box-shadow .35s ease, border-color .35s ease;
+      transition-delay: var(--reveal-delay, 0ms);
+      will-change: opacity, transform;
+    }
+
+    .reveal-left {
+      --reveal-x: -40px;
+    }
+
+    .reveal-right {
+      --reveal-x: 40px;
+    }
+
+    .reveal-item.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .reveal-item.is-visible.tl-card:hover,
+    .reveal-item.is-visible.testimonial:hover {
+      transform: translateY(-4px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .reveal-item,
+      .vsl-play {
+        opacity: 1;
+        transform: none;
+        transition: none;
+        animation: none;
+      }
+
+      .marquee-track {
+        animation: none;
+      }
+
+      .tl-card:hover,
+      .testimonial:hover {
+        transform: none;
+      }
+    }
+
+    /* ---------- Responsivo ---------- */
+    @media (max-width: 980px) {
+      .pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .pillar,
+      .pillar:nth-child(2),
+      .pillar:last-child {
+        padding: 32px 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .pillar::before,
+      .pillar:nth-child(2)::before,
+      .pillar:last-child::before {
+        left: 0;
+      }
+
+      .pillar:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .section {
+        padding: 76px 0;
+      }
+
+      .tries-grid,
+      .name-grid,
+      .chain-grid,
+      .gifts-grid,
+      .faq-grid,
+      .about-grid,
+      .offer-body {
+        grid-template-columns: 1fr;
+      }
+
+      .tries h2,
+      .gifts-head,
+      .faq-head {
+        position: static;
+      }
+
+      .tries-grid,
+      .gifts-grid,
+      .faq-grid {
+        gap: 36px;
+      }
+
+      .about-photo {
+        min-height: 460px;
+      }
+
+      .about-photo::after {
+        background: linear-gradient(180deg, transparent 60%, var(--violet-deep));
+      }
+
+      .about-copy {
+        padding: 56px 24px 72px;
+      }
+
+      .offer-price {
+        border-left: 0;
+        border-top: 1px solid var(--border);
+        padding-top: 30px;
+      }
+
+      .timeline::before {
+        left: 28px;
+      }
+
+      .tl-item {
+        grid-template-columns: 1fr;
+        padding-left: 76px;
+      }
+
+      .tl-item .dot {
+        left: 28px;
+        top: 18px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+
+      .tl-item:nth-child(odd) .tl-card,
+      .tl-item:nth-child(even) .tl-card {
+        grid-column: 1;
+        text-align: left;
+      }
+
+      .hero-cta .cta {
+        min-width: 0;
+        width: 100%;
+        max-width: 480px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .wrap {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .reveal-left {
+        --reveal-x: -14px;
+      }
+
+      .reveal-right {
+        --reveal-x: 14px;
+      }
+
+      .hero {
+        padding: 20px 0 64px;
+      }
+
+      .hero-bar {
+        margin-bottom: 40px;
+      }
+
+      .hero-bar .pill {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero-lead {
+        font-size: 16px;
+      }
+
+      .vsl {
+        border-radius: 14px;
+      }
+
+      .vsl-play {
+        width: 70px;
+        height: 70px;
+      }
+
+      .trust {
+        gap: 8px 16px;
+        font-size: 11px;
+      }
+
+      .tries h2,
+      .name-copy h2,
+      .chain-copy h2,
+      .method-head h2,
+      .gifts-head h2,
+      .about-copy h2,
+      .offer-head h2,
+      .faq-head h2 {
+        font-size: 32px;
+      }
+
+      .tries-list li,
+      .chain li {
+        font-size: 20px;
+      }
+
+      .contrast div {
+        padding: 28px 24px;
+      }
+
+      .timeline::before {
+        left: 22px;
+      }
+
+      .tl-item {
+        padding-left: 62px;
+      }
+
+      .tl-item .dot {
+        left: 22px;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+      }
+
+      .tl-card {
+        padding: 24px 22px;
+      }
+
+      .tl-card h3 {
+        font-size: 25px;
+      }
+
+      .sequence {
+        font-size: 20px;
+        padding: 22px;
+      }
+
+      .marquee-track span {
+        font-size: 20px;
+      }
+
+      .gift {
+        grid-template-columns: 50px 1fr;
+        gap: 14px;
+      }
+
+      .gift .num {
+        font-size: 34px;
+      }
+
+      .carousel {
+        grid-auto-columns: 86%;
+      }
+
+      .offer-top,
+      .offer-body {
+        padding: 28px 22px;
+      }
+
+      .certificate-inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 34px 22px;
+      }
+
+      .certificate .eyebrow {
+        justify-content: center;
+      }
+
+      summary {
+        font-size: 20px;
+      }
+
+      .final {
+        padding: 84px 0 110px;
+      }
+
+      .topbar {
+        padding: 8px 14px;
+      }
+
+      .topbar .brand small {
+        display: none;
+      }
+
+      .topbar .cta {
+        padding: 10px 16px;
+        font-size: 11px;
+      }
+
+      .mobile-cta {
+        position: fixed;
+        z-index: 50;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        display: block;
+        padding: 15px 18px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent-bright), var(--accent-deep));
+        color: #fff;
+        text-align: center;
+        font-size: 12.5px;
+        font-weight: 800;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        box-shadow: 0 12px 35px rgba(20, 42, 33, .35);
+        opacity: 0;
+        transform: translateY(16px);
+        pointer-events: none;
+        transition: .25s ease;
+      }
+
+      .mobile-cta.visible {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) — PENDENTE -->
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mandala" viewBox="-100 -100 200 200">
+      <g fill="currentColor">
+        <g id="petal">
+          <ellipse cx="0" cy="-36" rx="5.5" ry="21" />
+        </g>
+        <use href="#petal" transform="rotate(22.5)" />
+        <use href="#petal" transform="rotate(45)" />
+        <use href="#petal" transform="rotate(67.5)" />
+        <use href="#petal" transform="rotate(90)" />
+        <use href="#petal" transform="rotate(112.5)" />
+        <use href="#petal" transform="rotate(135)" />
+        <use href="#petal" transform="rotate(157.5)" />
+        <use href="#petal" transform="rotate(180)" />
+        <use href="#petal" transform="rotate(202.5)" />
+        <use href="#petal" transform="rotate(225)" />
+        <use href="#petal" transform="rotate(247.5)" />
+        <use href="#petal" transform="rotate(270)" />
+        <use href="#petal" transform="rotate(292.5)" />
+        <use href="#petal" transform="rotate(315)" />
+        <use href="#petal" transform="rotate(337.5)" />
+        <g id="arm">
+          <ellipse cx="0" cy="-64" rx="6" ry="9" />
+          <circle cx="0" cy="-80" r="3.2" />
+          <circle cx="0" cy="-92" r="2" />
+        </g>
+        <use href="#arm" transform="rotate(45)" />
+        <use href="#arm" transform="rotate(90)" />
+        <use href="#arm" transform="rotate(135)" />
+        <use href="#arm" transform="rotate(180)" />
+        <use href="#arm" transform="rotate(225)" />
+        <use href="#arm" transform="rotate(270)" />
+        <use href="#arm" transform="rotate(315)" />
+        <circle cx="0" cy="0" r="4" />
+      </g>
+    </symbol>
+    <symbol id="check" viewBox="0 0 24 24">
+      <path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="chain" viewBox="0 0 24 24">
+      <path d="M10 13a4 4 0 0 0 5.7 0l2.6-2.6a4 4 0 0 0-5.7-5.7L11.5 5.8" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" />
+      <path d="M14 11a4 4 0 0 0-5.7 0l-2.6 2.6a4 4 0 0 0 5.7 5.7l1.1-1.1" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" />
+    </symbol>
+    <symbol id="gift" viewBox="0 0 24 24">
+      <path d="M3 10h18v11H3z M3 7h18v3H3z M12 7v14 M12 7c-2-3-5-3-5-1s3 1 5 1zm0 0c2-3 5-3 5-1s-3 1-5 1z" fill="none"
+        stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="star" viewBox="0 0 24 24">
+      <path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" />
+    </symbol>
+  </svg>
+
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  <div class="topbar" id="topbar">
+    <a class="brand" href="#top" aria-label="Sayuri de Sousa">
+      <svg aria-hidden="true"><use href="#mandala" /></svg>
+      <span><b>Sayuri de Sousa</b><small>Método Equilíbrio Vital</small></span>
+    </a>
+    <a class="cta" href="#oferta" data-checkout>Quero entrar no Equilíbrio Vital</a>
+  </div>
+
+  <main id="top">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <svg class="mandala big" aria-hidden="true"><use href="#mandala" /></svg>
+      <svg class="mandala gold" aria-hidden="true"><use href="#mandala" /></svg>
+      <div class="wrap">
+        <div class="hero-bar">
+          <a class="brand" href="#top" aria-label="Sayuri de Sousa">
+            <svg aria-hidden="true"><use href="#mandala" /></svg>
+            <span><b>Sayuri de Sousa</b><small>Medicina Oriental &amp; Nutrição Funcional</small></span>
+          </a>
+          <span class="pill">Programa aprofundado</span>
+        </div>
+
+        <div class="hero-copy">
+          <div class="eyebrow">Método Equilíbrio Vital<sup style="font-size:.7em">®</sup></div>
+          <h1>Entenda por que o seu corpo mudou depois dos 40 e aprenda a reconstruir o seu <em>equilíbrio</em>, para
+            parar de viver em tentativa e erro com a própria saúde.</h1>
+          <p class="hero-lead">Aprenda como cada sinal do seu corpo se conecta e o que fazer, na prática, para sair do
+            estado de alerta e voltar a ter energia, sono e clareza de forma que se sustenta.</p>
+        </div>
+
+        <div class="vsl" id="vsl">
+          <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+          <!-- PENDENTE: substituir o bloco abaixo pelo embed da VSL -->
+          <div class="vsl-inner">
+            <div class="vsl-play" aria-hidden="true"></div>
+            <div class="vsl-label">Assista antes de continuar</div>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a class="cta" href="#oferta" data-checkout>Quero entender o meu corpo de verdade</a>
+          <ul class="trust">
+            <li>Acesso imediato</li>
+            <li>Compra 100% segura</li>
+            <li>Garantia de X dias</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TENTATIVAS ================= -->
+    <section class="section tries">
+      <div class="wrap tries-grid">
+        <div>
+          <div class="eyebrow">O ciclo que você conhece</div>
+          <h2>Cada coisa ajudou um pouco, mas, depois de um tempo, <em>tudo voltou.</em></h2>
+        </div>
+        <div>
+          <ul class="tries-list">
+            <li>Você já trocou a alimentação.</li>
+            <li>Testou o suplemento que a amiga indicou.</li>
+            <li>Começou a treinar, tentou dormir mais cedo, cortou o açúcar por algumas semanas.</li>
+          </ul>
+          <p class="big-question">E fica sempre a mesma pergunta rondando: por que eu faço tudo certo e o meu corpo
+            continua sem responder do jeito que respondia antes?</p>
+          <p>A resposta é mais simples do que parece, e ela não tem a ver com esforço. Cada uma dessas tentativas mexeu
+            em um pedaço isolado, enquanto o problema estava na forma como os pedaços conversam entre si.</p>
+          <p>Enquanto ninguém olha para essa conversa, você fica presa num ciclo de tentar, melhorar um pouco e voltar
+            para a estaca zero.</p>
+          <div class="cycle" aria-hidden="true">tentar<i></i>melhorar um pouco<i></i>estaca zero</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NOME vs CAMINHO ================= -->
+    <section class="section alt">
+      <div class="wrap name-grid">
+        <div class="name-copy">
+          <div class="eyebrow">Modo Defesa</div>
+          <h2>Você já sabe o nome, falta o caminho.</h2>
+          <p>Se você já ouviu falar em Modo Defesa, sabe do que estou falando.</p>
+          <p>É o estado em que o corpo entra depois de anos lendo a rotina como uma ameaça constante. Ele começa a
+            cortar o que considera supérfluo, energia, sono profundo, clareza mental, libido, para proteger o
+            essencial.</p>
+          <p>Ele faz isso com a única resposta que aprendeu ao longo do tempo.</p>
+          <p><strong>Entender essa lógica já muda muita coisa.</strong></p>
+          <p>E é exatamente aí que a maioria das mulheres trava: entende o que está sentindo, mas continua sem saber por
+            onde começar a reconstruir.</p>
+          <a class="cta" href="#metodo">Quero aprender o caminho de volta</a>
+        </div>
+        <div class="contrast">
+          <div class="a"><small>O nome</small><strong>Só que saber o nome do que acontece é uma coisa.</strong></div>
+          <div class="b"><small>O caminho</small><strong>Saber o caminho de volta é outra bem diferente.</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CADEIA ================= -->
+    <section class="section dark chain-section">
+      <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+      <div class="wrap chain-grid">
+        <div class="chain-copy">
+          <div class="eyebrow">A mudança real</div>
+          <h2>Mas, por que isso está acontecendo?</h2>
+          <p class="lead">Depois dos 40, o corpo passa por uma mudança real.</p>
+          <p>O estrogênio, que durante anos vinha equilibrando várias coisas nos bastidores, começa a se retirar.</p>
+          <p>O que estava sendo sustentado em silêncio aparece de uma vez: o sono muda, a digestão muda, o humor muda, o
+            peso muda.</p>
+          <p class="lead">Só que nada disso acontece separado.</p>
+          <div class="root-cause">A causa raiz costuma ser a mesma: o organismo perdeu parte da capacidade de se adaptar
+            diante de tudo o que chega ao mesmo tempo. Sem essa capacidade de adaptação, ele fica preso no estado de
+            alerta.</div>
+          <p style="margin-top:22px"><strong style="color:#fff">É por isso que nenhuma solução isolada se sustenta por
+              muito tempo.</strong></p>
+        </div>
+        <ul class="chain">
+          <li><span class="link"><svg><use href="#chain" /></svg></span>O cansaço conversa com o intestino.</li>
+          <li><span class="link"><svg><use href="#chain" /></svg></span>O intestino conversa com a inflamação.</li>
+          <li><span class="link"><svg><use href="#chain" /></svg></span>A inflamação atrapalha o sono.</li>
+          <li><span class="link"><svg><use href="#chain" /></svg></span>O sono desregula os hormônios… e por aí vai.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= MÉTODO — LINHA DO TEMPO ================= -->
+    <section class="section" id="metodo">
+      <div class="wrap">
+        <div class="method-head">
+          <div class="eyebrow center">A parte prática</div>
+          <h2>O Método Equilíbrio Vital<sup style="font-size:.4em;vertical-align:top">®</sup></h2>
+          <p>Dentro da marca Modo Defesa, o Equilíbrio Vital é a parte prática.</p>
+          <p><strong>São 06 etapas</strong> que seguem a mesma ordem que o corpo usa para sair do alerta e voltar a
+            funcionar bem. A ordem importa tanto quanto o conteúdo de cada uma.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item"><span class="dot">1</span>
+            <article class="tl-card"><span class="kicker">Etapa 1</span>
+              <h3>Perceber</h3>
+              <p>Antes de mudar qualquer coisa, você aprende a enxergar o que o seu corpo vem sinalizando há anos. O
+                cansaço ao acordar, o inchaço que aparece no fim da tarde, a fome que muda de padrão, o sono que quebra
+                de madrugada. Cada sinal diz alguma coisa, e você começa a ler essa linguagem.</p>
+            </article>
+          </div>
+          <div class="tl-item"><span class="dot">2</span>
+            <article class="tl-card"><span class="kicker">Etapa 2</span>
+              <h3>Investigar</h3>
+              <p>Com os sinais mapeados, você descobre quais sistemas estão sustentando o Modo Defesa no seu caso agora,
+                do intestino ao eixo do estresse, do sono à inflamação silenciosa. É isso que mostra por onde faz
+                sentido começar.</p>
+            </article>
+          </div>
+          <div class="tl-item"><span class="dot">3</span>
+            <article class="tl-card"><span class="kicker">Etapa 3</span>
+              <h3>Reduzir</h3>
+              <p>Aqui você diminui, de forma estratégica e temporária, os estímulos que mantêm o corpo em alerta. A
+                ideia é tirar o excesso que inflama e sobrecarrega, para o organismo entender que pode baixar a
+                guarda.</p>
+            </article>
+          </div>
+          <div class="tl-item"><span class="dot">4</span>
+            <article class="tl-card"><span class="kicker">Etapa 4</span>
+              <h3>Nutrir</h3>
+              <p>Com menos ruído interno, o corpo passa a ter espaço para receber o que estava faltando. Você reconstrói
+                energia e cuida do metabolismo, do intestino e da recuperação, com alimentação estratégica e recursos
+                da medicina oriental.</p>
+            </article>
+          </div>
+          <div class="tl-item"><span class="dot">5</span>
+            <article class="tl-card"><span class="kicker">Etapa 5</span>
+              <h3>Restaurar</h3>
+              <p>É a fase em que sono, digestão, disposição e movimento voltam a se organizar. A energia sobe de forma
+                consistente, como base que se acumula no dia a dia.</p>
+            </article>
+          </div>
+          <div class="tl-item"><span class="dot">6</span>
+            <article class="tl-card"><span class="kicker">Etapa 6</span>
+              <h3>Reequilibrar</h3>
+              <p>Por fim, tudo o que você construiu vira uma rotina possível dentro da sua vida real, o seu trabalho, a
+                sua família, a sua cultura alimentar. Você termina sabendo ler o próprio corpo e ajustar sozinha, sem
+                depender de começar um protocolo novo toda vez que algo muda.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="sequence">O que faz esse caminho funcionar é a sequência. Cada etapa prepara a próxima, e é
+          justamente essa ordem que os programas soltos pulam quando olham para um sintoma de cada vez.</div>
+        <div class="center-cta"><a class="cta" href="#oferta" data-checkout>Quero aprender o Método Equilíbrio
+            Vital</a></div>
+      </div>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Entender o corpo</span><span>Energia</span><span>Sono</span><span>Clareza</span><span>Equilíbrio</span><span>Autonomia</span><span>Vitalidade</span><span>Longevidade</span>
+        <span>Entender o corpo</span><span>Energia</span><span>Sono</span><span>Clareza</span><span>Equilíbrio</span><span>Autonomia</span><span>Vitalidade</span><span>Longevidade</span>
+      </div>
+    </div>
+
+    <!-- ================= O QUE VAI APRENDER ================= -->
+    <section class="section">
+      <div class="wrap">
+        <div class="method-head" style="margin-bottom:48px">
+          <div class="eyebrow center">Conteúdo</div>
+          <h2>O que você vai aprender?</h2>
+        </div>
+        <div class="pillars">
+          <article class="pillar"><span class="num">01</span>
+            <h3>Seu corpo em profundidade</h3>
+            <p>Modo Defesa a fundo, sinais e linguagem do corpo, e o que realmente muda no corpo depois dos 40.</p>
+          </article>
+          <article class="pillar"><span class="num">02</span>
+            <h3>O que drena a sua energia</h3>
+            <p>Inflamação, intestino e microbiota, metabolismo, energia celular, estresse e sistema nervoso, sono e
+              recuperação.</p>
+          </article>
+          <article class="pillar"><span class="num">03</span>
+            <h3>O que reconstrói o seu equilíbrio</h3>
+            <p>Alimentação estratégica, Medicina Oriental aplicada à mulher 40+, Qi, Yin e Yang, composição corporal,
+              construção de rotina e longevidade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRESENTES ================= -->
+    <section class="section alt">
+      <div class="wrap gifts-grid">
+        <div class="gifts-head">
+          <div class="gift-icon" aria-hidden="true"><svg><use href="#gift" /></svg></div>
+          <h2>E mais 5 presentes <em>selecionados a dedo.</em></h2>
+          <a class="cta" href="#oferta" data-checkout>Quero o programa completo + os bônus</a>
+        </div>
+        <ul class="gifts">
+          <li class="gift"><span class="num">1</span>
+            <div><small>Presente 1</small>
+              <h3>Mapa de Equilíbrio Vital</h3>
+              <p>Um panorama visual do método para você enxergar, em uma página, como cada sistema do seu corpo se
+                conecta e em que ordem trabalhar cada um.</p>
+            </div>
+          </li>
+          <li class="gift"><span class="num">2</span>
+            <div><small>Presente 2</small>
+              <h3>Guia de Alimentação para o Modo Defesa</h3>
+              <p>O que colocar no prato para tirar o corpo do estado de alerta, com opções adaptadas para a rotina de
+                quem vive nos Estados Unidos.</p>
+            </div>
+          </li>
+          <li class="gift"><span class="num">3</span>
+            <div><small>Presente 3</small>
+              <h3>Guia de Rotinas de Recuperação</h3>
+              <p>Pequenos rituais de sono, descanso e regulação do estresse para encaixar no dia sem virar mais uma
+                obrigação na sua lista.</p>
+            </div>
+          </li>
+          <li class="gift"><span class="num">4</span>
+            <div><small>Presente 4</small>
+              <h3>Diário de Sinais do Corpo</h3>
+              <p>Um material simples para registrar e acompanhar o que o seu corpo mostra ao longo do programa, e ver a
+                mudança acontecendo semana a semana.</p>
+            </div>
+          </li>
+          <li class="gift"><span class="num">5</span>
+            <div><small>Presente 5</small>
+              <h3>Aula especial: como interpretar os sinais do corpo depois dos 40</h3>
+              <p>Uma aula extra dedicada a ler os sinais dessa fase da vida, para você seguir interpretando o próprio
+                corpo mesmo depois de terminar o programa.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section class="section dark about-section" id="sobre">
+      <div class="about-grid">
+        <div class="about-photo">
+          <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+          <!-- PENDENTE: foto da Sayuri (retrato vertical). Enquanto não existe, o placeholder abaixo aparece. -->
+          <div class="photo-placeholder"><div><b>Sayuri de Sousa</b>Foto para a seção sobre<br>../assets/sayuri-sobre.webp</div></div>
+          <img src="../assets/sayuri-sobre.webp" alt="Sayuri de Sousa" loading="lazy" onerror="this.remove()">
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">Quem conduz</div>
+          <p class="signature">Prazer, sou a Sayuri.</p>
+          <h2>Médica de medicina oriental e nutrição funcional.</h2>
+          <p>Com mais de 5 anos de atuação clínica nos Estados Unidos, no Sul da Flórida. Em clínica própria, atendo
+            principalmente mulheres entre 40 e 65 anos, e já acompanhei centenas de pacientes nessa fase da vida.</p>
+          <ul class="creds">
+            <li>5+ anos de clínica nos EUA</li>
+            <li>Sul da Flórida</li>
+            <li>Mulheres de 40 a 65 anos</li>
+            <li>Centenas de pacientes</li>
+          </ul>
+          <p>Foi na prática clínica que percebi o padrão que deu origem a esse método.</p>
+          <p>Mulheres chegavam com vários sintomas ao mesmo tempo, tratando cada um como um problema separado, e
+            continuavam sem entender por que o corpo tinha mudado.</p>
+          <p>Quando eu olhava para o conjunto, os sinais quase sempre estavam conectados. Desse olhar nasceu o conceito
+            do Modo Defesa e, depois, a estrutura do Equilíbrio Vital.</p>
+          <p>Acredito que a combinação entre medicina oriental milenar e nutrição funcional oferece uma visão mais
+            completa da saúde da mulher na sua <em style="color:var(--accent-bright)">Segunda Primavera</em>. Ela permite
+            que cada uma compreenda os sinais do próprio corpo e participe, de forma ativa, da construção da própria
+            longevidade.</p>
+          <div class="quote-gold">A palavra-chave para uma vida saudável é equilíbrio. E o seu corpo sempre fala, basta
+            aprender a escutar.</div>
+          <a class="cta" href="#oferta" data-checkout>Quero ser protagonista da minha saúde</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DEPOIMENTOS ================= -->
+    <section class="section" id="depoimentos">
+      <div class="wrap">
+        <div class="method-head" style="margin-bottom:40px">
+          <div class="eyebrow center">Resultados reais</div>
+          <h2>O que as mulheres que passaram por esse caminho estão dizendo</h2>
+        </div>
+        <!-- PENDENTE: depoimentos reais. Os cards abaixo são placeholders (carrossel com scroll-snap). -->
+        <div class="carousel" aria-label="Depoimentos">
+          <article class="testimonial"><span class="qmark" aria-hidden="true">&ldquo;</span>
+            <div class="stars" aria-label="5 estrelas"><svg><use href="#star" /></svg><svg><use href="#star" /></svg><svg><use href="#star" /></svg><svg><use href="#star" /></svg><svg><use href="#star" /></svg></div>
+            <p class="pending">[Depoimento 1]</p>
+            <div class="who"><span class="avatar"></span><div><b>Nome</b><span>idade · cidade</span></div></div>
+          </article>
+          <article class="testimonial"><span class="qmark" aria-hidden="true">&ldquo;</span>
+            <div class="stars" aria-label="5 estrelas"><svg><use href="#star" /></svg><svg><use href="#star" /></svg><svg><use href="#star" /></svg><svg><use href="#star" /></svg><svg><use href="#star" /></svg></div>
+            <p class="pending">[Depoimento 2]</p>
+            <div class="who"><span class="avatar"></span><div><b>Nome</b><span>idade · cidade</span></div></div>
+          </article>
+          <article class="testimonial"><span class="qmark" aria-hidden="true">&ldquo;</span>
+            <div class="stars" aria-label="5 estrelas"><svg><use href="#star" /></svg><svg><use href="#star" /></svg><svg><use href="#star" /></svg><svg><use href="#star" /></svg><svg><use href="#star" /></svg></div>
+            <p class="pending">[Depoimento 3]</p>
+            <div class="who"><span class="avatar"></span><div><b>Nome</b><span>idade · cidade</span></div></div>
+          </article>
+          <article class="testimonial"><span class="qmark" aria-hidden="true">&ldquo;</span>
+            <div class="stars" aria-label="5 estrelas"><svg><use href="#star" /></svg><svg><use href="#star" /></svg><svg><use href="#star" /></svg><svg><use href="#star" /></svg><svg><use href="#star" /></svg></div>
+            <p class="pending">[Depoimento 4]</p>
+            <div class="who"><span class="avatar"></span><div><b>Nome</b><span>idade · cidade</span></div></div>
+          </article>
+        </div>
+        <p class="carousel-hint">Arraste para ver mais</p>
+        <div class="center-cta"><a class="cta" href="#oferta" data-checkout>Quero começar essa jornada</a></div>
+      </div>
+    </section>
+
+    <!-- ================= OFERTA ================= -->
+    <section class="section alt" id="oferta">
+      <div class="wrap">
+        <div class="offer-head">
+          <div class="eyebrow center">O momento é agora</div>
+          <h2>Por que começar agora?</h2>
+          <p><strong>Enquanto o corpo segue em alerta, o desgaste continua.</strong></p>
+          <p>Envelhecer com saúde é algo que se constrói agora, com o que você faz pelo corpo hoje. Cada fase que passa
+            em Modo Defesa é uma fase a menos de vitalidade que dava para recuperar.</p>
+        </div>
+        <div class="offer-box">
+          <div class="offer-top">
+            <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+            <span class="tag">Acesso imediato</span>
+            <h3>O programa completo, com as aulas aprofundadas e os 5 bônus:</h3>
+          </div>
+          <div class="offer-body">
+            <ul class="offer-list">
+              <li><span class="ck"><svg><use href="#check" /></svg></span>Método Equilíbrio Vital® completo — as 6 etapas com aulas aprofundadas</li>
+              <li><span class="ck"><svg><use href="#check" /></svg></span>Mapa de Equilíbrio Vital</li>
+              <li><span class="ck"><svg><use href="#check" /></svg></span>Guia de Alimentação para o Modo Defesa</li>
+              <li><span class="ck"><svg><use href="#check" /></svg></span>Guia de Rotinas de Recuperação</li>
+              <li><span class="ck"><svg><use href="#check" /></svg></span>Diário de Sinais do Corpo</li>
+              <li><span class="ck"><svg><use href="#check" /></svg></span>Aula especial: como interpretar os sinais do corpo depois dos 40</li>
+            </ul>
+            <div class="offer-price">
+              <!-- PENDENTE: preços e parcelamento reais -->
+              <p class="from">De US$ X</p>
+              <p class="price"><small>US$</small>X</p>
+              <p class="terms">à vista, ou em até X vezes no cartão</p>
+              <!-- PENDENTE: link de checkout — CHECKOUT_URL no script -->
+              <a class="cta" href="#oferta" data-checkout>Quero entrar no Equilíbrio Vital</a>
+              <p class="safe">Compra 100% segura · Acesso imediato · Garantia de X dias</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GARANTIA ================= -->
+    <section class="section" id="garantia">
+      <div class="wrap">
+        <div class="certificate">
+          <div class="certificate-inner">
+            <div class="seal"><div><b>X</b><span>dias de<br>garantia</span></div></div>
+            <div>
+              <div class="eyebrow">Garantia de X dias</div>
+              <h2>A decisão de continuar é sua, depois de experimentar.</h2>
+              <p>Entre no programa, assista às primeiras aulas, baixe os bônus e comece a aplicar. Se dentro de X dias
+                você sentir que não é para o seu momento, basta enviar um e-mail. <strong>Devolvo 100% do valor, sem
+                  burocracia.</strong></p>
+              <p>Assim você entra sem medo de gastar dinheiro de novo com algo que talvez não sirva.</p>
+              <a class="cta" href="#oferta" data-checkout>Quero começar sem risco</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section alt" id="faq">
+      <div class="wrap faq-grid">
+        <div class="faq-head">
+          <div class="eyebrow">Perguntas frequentes</div>
+          <h2>Ainda com dúvidas?</h2>
+          <p>As respostas para o que mais chega antes de entrar no programa.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Para quem é o Equilíbrio Vital?</summary>
+            <p>Para mulheres entre 40 e 65 anos, na perimenopausa, menopausa ou pós-menopausa, que sentem que o corpo
+              mudou e querem finalmente entender por quê, para sair do modo tentativa e erro e construir uma rotina que
+              faça sentido para a vida real delas.</p>
+          </details>
+          <details>
+            <summary>Em quanto tempo vou sentir diferença?</summary>
+            <p>Varia de mulher para mulher. Como o método trabalha na ordem que o corpo usa para sair do alerta, muitas
+              relatam melhora no sono, no inchaço e na disposição já nas primeiras semanas de aplicação. O foco aqui,
+              porém, é uma mudança que se sustenta, não um pico passageiro.</p>
+          </details>
+          <details>
+            <summary>Isso substitui o meu médico?</summary>
+            <p>Não. O programa é educativo e caminha em paralelo ao seu acompanhamento. Nenhuma medicação prescrita deve
+              ser interrompida sem orientação do profissional que indicou. O objetivo é te ajudar a entender o próprio
+              corpo e a criar condições melhores para ele funcionar.</p>
+          </details>
+          <details>
+            <summary>Já tentei de tudo e nada durou. Por que aqui seria diferente?</summary>
+            <p>Porque a maioria das tentativas anteriores olhou para um ponto isolado. Aqui você trabalha as conexões
+              entre os sistemas, que é justamente onde essas soluções soltas não chegam. Muitas vezes o que faltava não
+              era esforço, era uma estratégia que conectasse os sinais.</p>
+          </details>
+          <details>
+            <summary>Estou na menopausa. Isso não é normal e esperado?</summary>
+            <p>A menopausa é uma fase natural, e ela realmente expõe desequilíbrios que já vinham sendo mascarados
+              antes. Ela não obriga você a viver cansada, inchada e sem energia. O programa mostra o que dá para
+              trabalhar dentro dessa fase para recuperar qualidade de vida.</p>
+          </details>
+          <details>
+            <summary>Não tenho muito tempo. Consigo acompanhar?</summary>
+            <p>Sim. As rotinas são pensadas para encaixar em uma vida cheia, e uma boa parte do trabalho é sobre
+              entender melhor o corpo para fazer escolhas mais certeiras, não sobre adicionar mil tarefas novas ao seu
+              dia.</p>
+          </details>
+          <details>
+            <summary>Por quanto tempo tenho acesso?</summary>
+            <!-- PENDENTE: "acesso por X" -->
+            <p>Você tem acesso por X ao programa completo e aos bônus, no seu ritmo.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL ================= -->
+    <section class="section dark final">
+      <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+      <div class="wrap">
+        <div class="eyebrow center">Método Equilíbrio Vital®</div>
+        <h2>Entenda por que o seu corpo mudou depois dos 40 e aprenda a reconstruir o seu <em>equilíbrio.</em></h2>
+        <p>Acesso imediato · Compra 100% segura · Garantia de X dias</p>
+        <a class="cta" href="#oferta" data-checkout>Quero entrar no Equilíbrio Vital</a>
+        <p class="signature">Sayuri de Sousa</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <b>Sayuri de Sousa</b> · Medicina Oriental &amp; Nutrição Funcional<br>
+      © Sayuri de Sousa · Conteúdo educacional. O programa caminha em paralelo ao seu acompanhamento médico. Nenhuma
+      medicação prescrita deve ser interrompida sem orientação do profissional que a indicou.
+    </div>
+  </footer>
+
+  <a class="mobile-cta" href="#oferta" data-checkout>Quero entrar no Equilíbrio Vital</a>
+
+  <script>
+    // PENDENTE: colar aqui o link do checkout. Enquanto vazio, os botões rolam até a oferta.
+    const CHECKOUT_URL = "";
+    document.querySelectorAll('[data-checkout]').forEach((a) => {
+      if (CHECKOUT_URL) { a.href = CHECKOUT_URL; a.target = '_blank'; a.rel = 'noopener'; }
+    });
+
+    // Barra de progresso de leitura + cabeçalho fixo depois do hero
+    const bar = document.getElementById('progress-bar');
+    const topbar = document.getElementById('topbar');
+    const hero = document.querySelector('.hero');
+    const mobileCta = document.querySelector('.mobile-cta');
+    const onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      bar.style.width = `${max > 0 ? (h.scrollTop / max) * 100 : 0}%`;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    if (hero && 'IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => {
+        const past = !entry.isIntersecting;
+        topbar.classList.toggle('visible', past);
+        if (mobileCta) mobileCta.classList.toggle('visible', past);
+      }, { threshold: 0.05 }).observe(hero);
+    }
+
+    // Reveal ao rolar
+    const revealItems = document.querySelectorAll('.tries-list li,.contrast,.chain li,.tl-card,.pillar,.gift,.testimonial,.offer-box,.certificate-inner');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    revealItems.forEach((item, index) => {
+      item.classList.add('reveal-item', index % 2 === 0 ? 'reveal-left' : 'reveal-right');
+      item.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 70}ms`);
+    });
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
+    } else {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      revealItems.forEach((item) => revealObserver.observe(item));
+    }
+  </script>
+</body>
+
+</html>
