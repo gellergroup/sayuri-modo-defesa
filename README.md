@@ -7,7 +7,7 @@
 - `equilibrio-vital/index.html` — página de vendas do produto 02 (Método Equilíbrio Vital®), **diagramação nova** e **sub-paleta verde** (jade `#3E9C70`, menta `#7FCBA0`, jade escuro `#2A7352`, seções escuras verde-floresta `#0F2A20→#1F5A43`, fundos branco-menta; roxo da marca só em logo/rótulos/itálicos). Elementos: barra de progresso de leitura, cabeçalho fixo com CTA após o hero, VSL dentro do hero escuro, lista de tentativas com marcadores, painel "o nome / o caminho", cadeia dos sintomas, método em linha do tempo, pilares de conteúdo, presentes em lista editorial, sobre com foto sangrada, carrossel de depoimentos (scroll-snap), oferta em caixa dois tons, garantia em "certificado", FAQ em linhas. Pendências próprias: fotos, VSL, preços US$ X / X vezes, garantia X dias, "Acesso por X", `CHECKOUT_URL`, depoimentos
 - `equilibrio-vital/obrigado/index.html` — página de obrigado do produto 02 (sub-paleta verde). Confirmação escura com card do pedido + botão "Acessar o programa", seção de pergunta com card do formulário de interesse. `noindex`. Pendências: `MEMBER_URL`, `FORM_URL`, "Acesso por X". Número do pedido via `?pedido=`. "[sobrenome]" preenchido com "de Sousa"
 - `obrigado/index.html` — página de obrigado + upsell (Método Equilíbrio Vital), mesma paleta. `noindex`. Pendências próprias: VSL do upsell, "X minutos", preços (US$ XXX / 12x XX,XX), `UPSELL_URL` e `MEMBER_URL` no script, e-mail/WhatsApp de suporte, "Acesso por X". Número do pedido é preenchido automaticamente se a URL vier com `?pedido=` (ou `?order=`). ⚠️ A copy chama o produto de entrada de "Reset da Energia Feminina" — a página de vendas usa "Modo Defesa: Reconexão com a Energia Feminina"; mantido como recebido, aguardando decisão do copywriter
-- `assets/` — fotos já encaixadas (2026-09-03, escolhidas entre as 13 enviadas em `../../assets/fotos/`): `sayuri-hero.webp` (jaleco branco no consultório → hero do Reset), `sayuri-sobre.webp` (sorriso, mão no queixo → "Quem conduz" do Reset), `sayuri-ev-sobre.webp` (fitoterapia, potes de ervas → "Prazer, sou a Sayuri" do Equilíbrio Vital), `sayuri-ev-hero.webp` (olhar, fundo escuro → hero do Equilíbrio Vital, ao lado da headline), `sayuri-ev-oferta.webp` (blazer verde-musgo → círculo no topo da caixa de oferta do Equilíbrio Vital). Ainda faltam: `og-modo-defesa.jpg`, `og-equilibrio-vital.jpg`, logo em PNG/SVG
+- `assets/` — fotos já encaixadas (2026-09-03, escolhidas entre as 13 enviadas em `../../assets/fotos/`): `sayuri-hero.webp` (jaleco branco no consultório → hero do Reset), `sayuri-sobre.webp` (sorriso, mão no queixo → "Quem conduz" do Reset), `sayuri-ev-sobre.webp` (fitoterapia, potes de ervas → "Prazer, sou a Sayuri" do Equilíbrio Vital), `sayuri-ev-hero.webp` (olhar, fundo escuro → hero do Equilíbrio Vital, ao lado da headline), `sayuri-ev-oferta.webp` (blazer verde-musgo → círculo no topo da caixa de oferta do Equilíbrio Vital). Logo oficial recebida em 2026-09-04 (`assets/fotos/3.png`) e aplicada: `logo-sayuri.png` (lockup), `logo-mandala.png` (só a mandala, header + marcas d'água) e versões brancas. Ainda faltam: `og-modo-defesa.jpg`, `og-equilibrio-vital.jpg`
 - Cópia para deploy: `EQUIPE GELLER/arquivos-para-deploy/sayuri-modo-defesa/index.html`
 - Repositório: `gellergroup/sayuri-modo-defesa` (só histórico de código — sem GitHub Pages, por decisão da Priscila)
 
@@ -24,7 +24,7 @@
 
 Tipografia: **Cormorant Garamond** (títulos, itálicos de acento, assinatura — ecoa o serif da logo) + **Manrope** (texto e labels).
 
-> O roxo foi estimado a partir da imagem da logo. Ao receber o arquivo PNG/SVG, conferir o hex exato e ajustar `--violet` no `:root`.
+> Roxo confirmado a partir do arquivo oficial da logo: `--violet: #480070` (aplicado nas 4 páginas em 2026-09-04).
 
 ## Passada de UX (2026-09-03, após revisão da Priscila no desktop)
 - Corrigida especificidade de CSS que encolhia destaques: pergunta grande em itálico (EV), assinatura "Sayuri de Sousa" (Reset, sobre e final), frase dos "luxos" na seção Modo Defesa (Reset), assinatura no sobre (EV)
@@ -47,7 +47,7 @@ Tipografia: **Cormorant Garamond** (títulos, itálicos de acento, assinatura �
 
 ## Pendências (visíveis na página como placeholders)
 1. **Foto da Sayuri** — `assets/sayuri-hero.webp` (4:5, fundo neutro ou recortada) e `assets/sayuri-sobre.webp`. Enquanto não existem, aparece um bloco roxo com a mandala
-2. **Logo** em PNG/SVG — hoje o header usa uma mandala desenhada em SVG inspirada na logo; trocar pela oficial e confirmar o hex do roxo
+2. ~~**Logo** em PNG/SVG~~ — feito em 2026-09-04: header e marcas d'água usam a mandala real (`assets/logo-mandala.png`), hex do roxo confirmado
 3. **VSL** — colar o embed dentro de `<div class="vsl">` (id `vsl`), substituindo o bloco `.vsl-inner`
 4. **Link de checkout** — `CHECKOUT_URL` no script (cartão/Zelle)
 5. **Depoimentos reais** — 3 cards placeholder em `#depoimentos` (priorizar sono, energia, inchaço, leitura do corpo)
@@ -62,7 +62,7 @@ Tipografia: **Cormorant Garamond** (títulos, itálicos de acento, assinatura �
 - [x] Zero emojis na página
 - [x] Nenhuma foto genérica de banco de imagem
 - [x] Layout não parece template Canva/Wix (hierarquia serif/sans, kickers, cards com borda e profundidade, seções escuras com motivo da marca)
-- [x] Cores e fontes derivadas da logo (roxo) — aguardando confirmação do hex
+- [x] Cores e fontes derivadas da logo (roxo) — hex confirmado pelo arquivo oficial (#480070)
 - [x] Responsivo (mobile + desktop) — testar em 375px e 768px após inserir as fotos
 - [x] Acentuação correta em todo texto
 
