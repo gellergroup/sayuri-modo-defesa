@@ -40,7 +40,7 @@
       --ink: #142a21;
       --text: #2f4a3d;
       --muted: #5f7a6c;
-      --violet: #4a1a6b;
+      --violet: #480070;
       --violet-mid: #6a3a99;
       --violet-deep: #163d2e;
       --violet-night: #0f2a20;
@@ -299,7 +299,7 @@
       color: var(--violet);
     }
 
-    .brand svg {
+    .brand svg, .brand img {
       width: 32px;
       height: 32px;
     }
@@ -2307,41 +2307,7 @@
   <!-- Google Tag Manager (noscript) — PENDENTE -->
 
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="mandala" viewBox="-100 -100 200 200">
-      <g fill="currentColor">
-        <g id="petal">
-          <ellipse cx="0" cy="-36" rx="5.5" ry="21" />
-        </g>
-        <use href="#petal" transform="rotate(22.5)" />
-        <use href="#petal" transform="rotate(45)" />
-        <use href="#petal" transform="rotate(67.5)" />
-        <use href="#petal" transform="rotate(90)" />
-        <use href="#petal" transform="rotate(112.5)" />
-        <use href="#petal" transform="rotate(135)" />
-        <use href="#petal" transform="rotate(157.5)" />
-        <use href="#petal" transform="rotate(180)" />
-        <use href="#petal" transform="rotate(202.5)" />
-        <use href="#petal" transform="rotate(225)" />
-        <use href="#petal" transform="rotate(247.5)" />
-        <use href="#petal" transform="rotate(270)" />
-        <use href="#petal" transform="rotate(292.5)" />
-        <use href="#petal" transform="rotate(315)" />
-        <use href="#petal" transform="rotate(337.5)" />
-        <g id="arm">
-          <ellipse cx="0" cy="-64" rx="6" ry="9" />
-          <circle cx="0" cy="-80" r="3.2" />
-          <circle cx="0" cy="-92" r="2" />
-        </g>
-        <use href="#arm" transform="rotate(45)" />
-        <use href="#arm" transform="rotate(90)" />
-        <use href="#arm" transform="rotate(135)" />
-        <use href="#arm" transform="rotate(180)" />
-        <use href="#arm" transform="rotate(225)" />
-        <use href="#arm" transform="rotate(270)" />
-        <use href="#arm" transform="rotate(315)" />
-        <circle cx="0" cy="0" r="4" />
-      </g>
-    </symbol>
+    <symbol id="mandala" viewBox="-100 -100 200 200"><image href="../assets/logo-mandala.png" x="-100" y="-100" width="200" height="200" /></symbol><symbol id="mandala-w" viewBox="-100 -100 200 200"><image href="../assets/logo-mandala-branca.png" x="-100" y="-100" width="200" height="200" /></symbol>
     <symbol id="check" viewBox="0 0 24 24">
       <path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
         stroke-linejoin="round" />
@@ -2364,7 +2330,7 @@
   <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
   <div class="topbar" id="topbar">
     <a class="brand" href="#top" aria-label="Sayuri de Sousa">
-      <svg aria-hidden="true"><use href="#mandala" /></svg>
+      <img src="../assets/logo-mandala.png" alt="" width="34" height="34">
       <span><b>Sayuri de Sousa</b><small>Método Equilíbrio Vital</small></span>
     </a>
     <a class="cta" href="#oferta" data-checkout>Quero entrar no Equilíbrio Vital</a>
@@ -2373,12 +2339,12 @@
   <main id="top">
     <!-- ================= HERO ================= -->
     <section class="hero">
-      <svg class="mandala big" aria-hidden="true"><use href="#mandala" /></svg>
-      <svg class="mandala gold" aria-hidden="true"><use href="#mandala" /></svg>
+      <svg class="mandala big" aria-hidden="true"><use href="#mandala-w" /></svg>
+      <svg class="mandala gold" aria-hidden="true"><use href="#mandala-w" /></svg>
       <div class="wrap">
         <div class="hero-bar">
           <a class="brand" href="#top" aria-label="Sayuri de Sousa">
-            <svg aria-hidden="true"><use href="#mandala" /></svg>
+            <img src="../assets/logo-mandala-branca.png" alt="" width="34" height="34">
             <span><b>Sayuri de Sousa</b><small>Medicina Oriental &amp; Nutrição Funcional</small></span>
           </a>
           <span class="pill">Programa aprofundado</span>
@@ -2405,7 +2371,7 @@
         </div>
 
         <div class="vsl" id="vsl">
-          <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+          <svg class="mandala" aria-hidden="true"><use href="#mandala-w" /></svg>
           <!-- PENDENTE: substituir o bloco abaixo pelo embed da VSL -->
           <div class="vsl-inner">
             <div class="vsl-play" aria-hidden="true"></div>
@@ -2468,7 +2434,7 @@
 
     <!-- ================= CADEIA ================= -->
     <section class="section dark chain-section">
-      <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+      <svg class="mandala" aria-hidden="true"><use href="#mandala-w" /></svg>
       <div class="wrap chain-grid">
         <div class="chain-copy">
           <div class="eyebrow">A mudança real</div>
@@ -2640,7 +2606,7 @@
             </div>
           </li>
           <li class="gift-cta">
-            <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+            <svg class="mandala" aria-hidden="true"><use href="#mandala-w" /></svg>
             <div>
               <span class="kicker">Acesso imediato</span>
               <strong>O programa completo, com as aulas aprofundadas e os 5 bônus.</strong>
@@ -2655,7 +2621,7 @@
     <section class="section dark about-section" id="sobre">
       <div class="about-grid">
         <div class="about-photo">
-          <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+          <svg class="mandala" aria-hidden="true"><use href="#mandala-w" /></svg>
           <!-- PENDENTE: foto da Sayuri (retrato vertical). Enquanto não existe, o placeholder abaixo aparece. -->
           <div class="photo-placeholder"><div><b>Sayuri de Sousa</b>Foto para a seção sobre<br>../assets/sayuri-ev-sobre.webp</div></div>
           <img src="../assets/sayuri-ev-sobre.webp" alt="Sayuri de Sousa" loading="lazy" onerror="this.remove()">
@@ -2739,7 +2705,7 @@
         </div>
         <div class="offer-box">
           <div class="offer-top">
-            <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+            <svg class="mandala" aria-hidden="true"><use href="#mandala-w" /></svg>
             <div class="offer-photo"><img src="../assets/sayuri-ev-oferta.webp" alt="Sayuri de Sousa" loading="lazy"></div>
             <div>
               <span class="tag">Acesso imediato</span>
@@ -2844,7 +2810,7 @@
 
     <!-- ================= FINAL ================= -->
     <section class="section dark final">
-      <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+      <svg class="mandala" aria-hidden="true"><use href="#mandala-w" /></svg>
       <div class="wrap">
         <div class="eyebrow center">Método Equilíbrio Vital®</div>
         <h2>Entenda por que o seu corpo mudou depois dos 40 e aprenda a reconstruir o seu <em>equilíbrio.</em></h2>
