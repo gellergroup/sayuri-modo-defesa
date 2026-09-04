@@ -1681,6 +1681,11 @@
         gap: 40px;
       }
 
+      /* Regra Geller: no mobile a foto vem antes da headline */
+      .hero-grid .photo-frame {
+        order: -1;
+      }
+
       .photo-frame {
         margin: 0 auto;
         width: min(100%, 420px);
@@ -1752,7 +1757,12 @@
         font-size: 28px;
       }
 
-      .photo-frame {
+      .hero-grid .photo-frame {
+        aspect-ratio: 1 / 1.02;
+        margin-bottom: 14px;
+      }
+
+      .about .photo-frame {
         aspect-ratio: 4 / 4.6;
       }
 

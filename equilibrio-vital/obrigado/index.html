@@ -385,31 +385,37 @@
       opacity: .05;
     }
 
-    .ask-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 72px;
-      align-items: center;
+    .ask-head {
+      max-width: 780px;
+      margin: 0 auto 40px;
+      text-align: center;
     }
 
     .ask-head h2 {
       margin: 16px 0 18px;
-      font-size: clamp(36px, 4.8vw, 56px);
+      font-size: clamp(38px, 5.2vw, 60px);
       line-height: 1.04;
     }
 
     .ask-head p {
+      max-width: 620px;
+      margin: 0 auto;
       color: var(--text);
-      font-size: 17px;
+      font-size: 18px;
     }
 
     .ask-head p strong {
       color: var(--ink);
     }
 
+    .ask-body {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
     .ask-body p {
       color: var(--text);
-      font-size: 16.5px;
+      font-size: 17px;
     }
 
     .not-yet {
@@ -547,9 +553,8 @@
         padding: 76px 0;
       }
 
-      .ask-grid {
-        grid-template-columns: 1fr;
-        gap: 36px;
+      .ask-head {
+        margin-bottom: 28px;
       }
     }
 
@@ -683,9 +688,9 @@
     <!-- ================= PERGUNTA / INTERESSE ================= -->
     <section class="ask">
       <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
-      <div class="wrap ask-grid">
+      <div class="wrap">
         <div class="ask-head">
-          <div class="eyebrow">Uma pergunta</div>
+          <div class="eyebrow center">Uma pergunta</div>
           <h2>Antes de começar, queria te fazer uma <em>pergunta…</em></h2>
           <p>O Equilíbrio Vital é um programa completo, mas eu sei que <strong>algumas vão querer mais.</strong></p>
         </div>

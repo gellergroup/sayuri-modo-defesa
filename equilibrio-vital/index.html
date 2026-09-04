@@ -2038,9 +2038,25 @@
         margin-bottom: 44px;
       }
 
-      .hero-portrait {
+      /* Regra Geller: no mobile a foto vem antes da headline */
+      .hero-grid .hero-portrait {
+        order: -1;
         margin: 0 auto;
-        width: min(100%, 380px);
+        width: min(100%, 420px);
+        aspect-ratio: 1 / 1.02;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero .eyebrow,
+      .hero-copy .trust {
+        justify-content: center;
+      }
+
+      .hero-lead {
+        margin-inline: auto;
       }
 
       .offer-top {
