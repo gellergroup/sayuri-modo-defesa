@@ -3,7 +3,8 @@
 **Cliente:** Sayuri de Sousa (via Geller Group) · **Data:** 2026-09-03 · **Status:** v1 aguardando validação de paleta
 
 ## Arquivos
-- `index.html` — página completa (CSS + JS inline, sem dependência além do Google Fonts)
+- `index.html` — página de vendas completa (CSS + JS inline, sem dependência além do Google Fonts)
+- `obrigado/index.html` — página de obrigado + upsell (Método Equilíbrio Vital), mesma paleta. `noindex`. Pendências próprias: VSL do upsell, "X minutos", preços (US$ XXX / 12x XX,XX), `UPSELL_URL` e `MEMBER_URL` no script, e-mail/WhatsApp de suporte, "Acesso por X". Número do pedido é preenchido automaticamente se a URL vier com `?pedido=` (ou `?order=`). ⚠️ A copy chama o produto de entrada de "Reset da Energia Feminina" — a página de vendas usa "Modo Defesa: Reconexão com a Energia Feminina"; mantido como recebido, aguardando decisão do copywriter
 - `assets/` — vazio por enquanto. Esperado: `sayuri-hero.webp`, `sayuri-sobre.webp`, `og-modo-defesa.jpg`, logo
 - Cópia para deploy: `EQUIPE GELLER/arquivos-para-deploy/sayuri-modo-defesa/index.html`
 - Repositório: `gellergroup/sayuri-modo-defesa` (só histórico de código — sem GitHub Pages, por decisão da Priscila)
