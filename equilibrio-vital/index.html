@@ -1314,7 +1314,8 @@
       position: absolute;
       inset: 0;
       z-index: 1;
-      background: linear-gradient(90deg, transparent 60%, var(--violet-deep));
+      /* desktop: a foto some no mesmo verde sólido do bloco de texto, antes da borda */
+      background: linear-gradient(90deg, transparent 55%, rgba(22, 61, 46, .6) 80%, var(--violet-deep) 94%);
       pointer-events: none;
     }
 
@@ -1346,6 +1347,8 @@
 
     .about-copy {
       padding: 96px 72px 96px 64px;
+      /* cor sólida = ponto final do degradê da foto, pra virar uma superfície contínua */
+      background: var(--violet-deep);
     }
 
     .about-copy p.signature {
@@ -2078,12 +2081,15 @@
         min-height: 460px;
       }
 
+      /* mobile: foto dissolve no verde antes da borda inferior (chega na cor em 90%) */
       .about-photo::after {
-        background: linear-gradient(180deg, transparent 60%, var(--violet-deep));
+        background: linear-gradient(180deg, transparent 42%, rgba(22, 61, 46, .55) 70%, var(--violet-deep) 90%);
       }
 
+      /* texto sobe pra ocupar a área já dissolvida; sem gap entre foto e bloco */
       .about-copy {
-        padding: 56px 24px 72px;
+        padding: 8px 24px 72px;
+        margin-top: -36px;
       }
 
       .offer-price {
