@@ -1,0 +1,1449 @@
+<!doctype html>
+<html lang="pt-BR">
+<!--
+  PÁGINA: Obrigado + upsell (produto 02: Método Equilíbrio Vital) — pós-compra do Modo Defesa: Reconexão com a Energia Feminina
+  CLIENTE: Sayuri de Sousa (via Geller Group) — clientes/geller/clientes/sayuri/
+  NICHO: Medicina oriental + nutrição funcional — mulheres 40–65
+  OBJETIVO: confirmar a compra e converter para o upsell (condição exclusiva, expira ao sair da página)
+  MODELO: mesma paleta/tipografia da página de vendas (index.html na pasta acima); estrutura de obrigado+upsell Geller
+  STATUS: v1 — aguardando validação
+  PENDÊNCIAS: VSL do upsell, "X minutos", preços (US$ XXX / 12x XX,XX), link de checkout do upsell, link da área de
+              membros do Reset, e-mail/WhatsApp de suporte, "Acesso por X", número do pedido (via ?pedido= na URL), GTM
+  NOME DO PRODUTO: 2026-09-11 — Priscila definiu "Modo Defesa: Reconexão com a Energia Feminina" (substituiu "Reset da
+           Energia Feminina" em 5 ocorrências). Acesso: 1 ano (rodapé)
+  HUMANIZER: copy mantida na íntegra; zero emojis (✅ e ⏰ viraram ícones SVG); sem foto de banco de imagem
+-->
+
+<head>
+  <!-- Google Tag Manager — PENDENTE -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>[BR] Compra confirmada | Modo Defesa: Reconexão com a Energia Feminina — Sayuri de Sousa</title>
+  <meta name="description" content="A sua compra do Modo Defesa: Reconexão com a Energia Feminina foi confirmada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fdfbfe;
+      --surface: #ffffff;
+      --surface-2: #f6f1fa;
+      --ink: #24102f;
+      --text: #3d2f4a;
+      --muted: #6b5d78;
+      --violet: #480070;
+      --violet-mid: #6a3a99;
+      --violet-deep: #2e0f45;
+      --violet-soft: #e9ddf2;
+      --violet-glow: rgba(106, 58, 153, .16);
+      --gold: #c9a24a;
+      --gold-bright: #e0bc5e;
+      --gold-deep: #a98431;
+      --gold-glow: rgba(201, 162, 74, .32);
+      --on-dark: #f3ecf8;
+      --on-dark-muted: #cdb9dd;
+      --border: rgba(74, 26, 107, .10);
+      --shadow: 0 12px 40px rgba(46, 15, 69, .07);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Manrope, "Segoe UI", sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      text-wrap: balance;
+    }
+
+    h1 em,
+    h2 em {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--violet);
+    }
+
+    p {
+      line-height: 1.75;
+    }
+
+    .wrap {
+      width: min(1040px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .narrow {
+      max-width: 760px;
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section.alt {
+      background: var(--surface-2);
+    }
+
+    .section.dark {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: linear-gradient(160deg, var(--violet-deep) 0%, var(--violet) 62%, #5b2a82 100%);
+      color: var(--on-dark);
+    }
+
+    .section.dark h2,
+    .section.dark h3 {
+      color: #fff;
+    }
+
+    .section.dark h2 em {
+      color: var(--gold-bright);
+    }
+
+    .section.dark p {
+      color: var(--on-dark-muted);
+    }
+
+    .section.dark .eyebrow {
+      color: var(--gold-bright);
+    }
+
+    .mandala {
+      position: absolute;
+      z-index: -1;
+      color: currentColor;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--violet-mid);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .eyebrow.center {
+      justify-content: center;
+    }
+
+    .eyebrow.center::after {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin: 0 auto 44px;
+      text-align: center;
+    }
+
+    .section-head h2 {
+      margin: 16px 0 16px;
+      font-size: clamp(34px, 4.6vw, 52px);
+      line-height: 1.06;
+    }
+
+    .section-head p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .cta {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      min-height: 60px;
+      padding: 18px 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold) 55%, var(--gold-deep));
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: .05em;
+      line-height: 1.3;
+      text-align: center;
+      text-transform: uppercase;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), 0 16px 38px var(--gold-glow);
+      transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 22px 46px rgba(201, 162, 74, .42);
+    }
+
+    .cta:focus-visible {
+      outline: 3px solid var(--violet-mid);
+      outline-offset: 3px;
+    }
+
+    .cta-ghost {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 56px;
+      padding: 16px 30px;
+      border: 1.5px solid rgba(74, 26, 107, .35);
+      border-radius: 8px;
+      background: transparent;
+      color: var(--violet);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: .2s ease;
+    }
+
+    .cta-ghost:hover {
+      border-color: var(--violet);
+      background: rgba(233, 221, 242, .5);
+    }
+
+    .center-cta {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .cta-note {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ---------- CONFIRMAÇÃO ---------- */
+    .confirm {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 36px 0 72px;
+      background: var(--surface);
+    }
+
+    .confirm::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      background:
+        radial-gradient(circle at 50% 0, var(--violet-glow), transparent 42%),
+        radial-gradient(circle at 92% 90%, rgba(201, 162, 74, .12), transparent 30%),
+        linear-gradient(180deg, #f9f4fc, #ffffff 70%);
+    }
+
+    .confirm .mandala {
+      top: -220px;
+      left: 50%;
+      width: 640px;
+      height: 640px;
+      transform: translateX(-50%);
+      color: var(--violet);
+      opacity: .05;
+    }
+
+    .brand-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 56px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--violet);
+    }
+
+    .brand svg, .brand img {
+      width: 34px;
+      height: 34px;
+    }
+
+    .brand b {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 1px;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--violet-mid);
+    }
+
+    .brand-bar .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      background: rgba(255, 255, 255, .7);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .brand-bar .pill::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(201, 162, 74, .22);
+    }
+
+    .confirm-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .check-badge {
+      display: grid;
+      place-items: center;
+      width: 84px;
+      height: 84px;
+      margin: 0 auto 26px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep));
+      color: var(--ink);
+      box-shadow: 0 18px 44px rgba(201, 162, 74, .38), 0 0 0 12px rgba(224, 188, 94, .14);
+    }
+
+    .check-badge svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    .confirm h1 {
+      margin: 0 0 16px;
+      font-size: clamp(34px, 4.8vw, 54px);
+      line-height: 1.06;
+    }
+
+    .confirm-lead {
+      margin: 0 auto 34px;
+      max-width: 560px;
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .order-card {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 28px 30px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(150deg, #ffffff, #f8f3fb);
+      text-align: left;
+    }
+
+    .order-card .kicker {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--violet-mid);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .order-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    .order-row span {
+      color: var(--muted);
+    }
+
+    .order-row b {
+      color: var(--ink);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ---------- VSL UPSELL (dark) ---------- */
+    .upsell-intro .mandala.bg-l {
+      left: -200px;
+      bottom: -220px;
+      width: 620px;
+      height: 620px;
+      opacity: .06;
+    }
+
+    .upsell-intro .mandala.bg-r {
+      right: -140px;
+      top: -160px;
+      width: 440px;
+      height: 440px;
+      opacity: .05;
+    }
+
+    .upsell-intro .section-head h2 {
+      color: #fff;
+    }
+
+    .upsell-intro .section-head p {
+      color: var(--on-dark-muted);
+    }
+
+    .vsl {
+      position: relative;
+      max-width: 860px;
+      margin: 0 auto 30px;
+      aspect-ratio: 16 / 9;
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(160deg, #1f0a30, var(--violet-deep) 70%);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .35), 0 0 0 1px rgba(224, 188, 94, .35);
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+    }
+
+    .vsl .mandala {
+      width: 70%;
+      height: 70%;
+      color: #fff;
+      opacity: .07;
+    }
+
+    .vsl iframe,
+    .vsl video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .vsl-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      justify-items: center;
+    }
+
+    .vsl-play {
+      display: grid;
+      place-items: center;
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep));
+      box-shadow: 0 16px 40px rgba(201, 162, 74, .45), 0 0 0 12px rgba(224, 188, 94, .14);
+    }
+
+    .vsl-play::after {
+      content: "";
+      margin-left: 6px;
+      border-style: solid;
+      border-width: 15px 0 15px 26px;
+      border-color: transparent transparent transparent var(--ink);
+    }
+
+    .vsl-label {
+      margin-top: 22px;
+      color: var(--on-dark-muted);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    /* ---------- PONTE / MÉTODO ---------- */
+    .bridge h2 {
+      margin: 16px 0 22px;
+      font-size: clamp(32px, 4.2vw, 46px);
+      line-height: 1.08;
+    }
+
+    .bridge p {
+      color: var(--text);
+      font-size: 16.5px;
+    }
+
+    .quote {
+      margin: 26px 0;
+      padding: 22px 26px;
+      border-left: 3px solid var(--gold);
+      background: rgba(233, 221, 242, .45);
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.4;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .compare {
+      display: grid;
+      gap: 14px;
+    }
+
+    .compare-card {
+      padding: 26px 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(150deg, #ffffff, #f8f3fb);
+    }
+
+    .compare-card.highlight {
+      border-color: rgba(201, 162, 74, .5);
+      background: linear-gradient(150deg, #fffdf7, #faf5fb);
+    }
+
+    .compare-card .kicker {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--violet-mid);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .compare-card.highlight .kicker {
+      color: var(--gold-deep);
+    }
+
+    .compare-card p {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .brand-line {
+      padding: 20px 24px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--violet-deep), var(--violet));
+      color: #fff;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .brand-line strong {
+      color: var(--gold-bright);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .step {
+      padding: 30px 26px 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, #ffffff, #f7f2fa);
+    }
+
+    .step .num {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--gold);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: .9;
+    }
+
+    .step h3 {
+      margin: 0 0 10px;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.65;
+    }
+
+    /* ---------- POR DENTRO / BÔNUS ---------- */
+    .inside p.lead {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      text-align: center;
+      color: var(--text);
+      font-size: 17px;
+    }
+
+    .bonus-title {
+      margin: 0 0 18px;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .bonuses {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .bonus {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 22px 24px;
+      border: 1px solid rgba(201, 162, 74, .32);
+      border-radius: 12px;
+      background: linear-gradient(150deg, #fffdf7, #faf5fb);
+    }
+
+    .bonus .ck {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep));
+      color: var(--ink);
+      box-shadow: 0 6px 14px var(--gold-glow);
+    }
+
+    .bonus .ck svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .bonus p {
+      margin: 3px 0 0;
+      color: var(--text);
+      font-size: 15.5px;
+      line-height: 1.55;
+    }
+
+    .bonus p b {
+      color: var(--ink);
+    }
+
+    .bonus.full {
+      grid-column: 1 / -1;
+    }
+
+    /* ---------- CUSTO DE CONTINUAR SOZINHA (dark) ---------- */
+    .alone .mandala {
+      right: -220px;
+      top: 50%;
+      width: 640px;
+      height: 640px;
+      transform: translateY(-50%);
+      opacity: .06;
+    }
+
+    .alone h2 {
+      margin: 16px 0 22px;
+      font-size: clamp(32px, 4.2vw, 46px);
+      line-height: 1.08;
+    }
+
+    .alone p {
+      font-size: 16.5px;
+    }
+
+    .quote-gold {
+      margin: 28px 0 0;
+      padding: 24px 28px;
+      border-left: 3px solid var(--gold-bright);
+      background: rgba(255, 255, 255, .06);
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.4;
+      border-radius: 0 12px 12px 0;
+    }
+
+    /* ---------- OFERTA ---------- */
+    .offer-grid {
+      display: grid;
+      grid-template-columns: 1fr 440px;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .offer-copy h2 {
+      margin: 16px 0 20px;
+      font-size: clamp(34px, 4.4vw, 48px);
+      line-height: 1.06;
+    }
+
+    .offer-copy p {
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .urgency {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-top: 22px;
+      padding: 18px 20px;
+      border: 1px solid rgba(201, 162, 74, .4);
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(224, 188, 94, .14), rgba(233, 221, 242, .3));
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .urgency svg {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      color: var(--gold-deep);
+      margin-top: 1px;
+    }
+
+    .price-card {
+      position: relative;
+      padding: 42px 34px 34px;
+      border: 1px solid rgba(201, 162, 74, .55);
+      border-radius: 20px;
+      background: radial-gradient(circle at 50% 0, rgba(224, 188, 94, .22), transparent 48%), linear-gradient(170deg, #ffffff, #faf6fc);
+      box-shadow: 0 24px 64px rgba(46, 15, 69, .12), 0 0 44px rgba(201, 162, 74, .14);
+      text-align: center;
+    }
+
+    .price-card .tag {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 8px 16px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 20px var(--gold-glow);
+    }
+
+    .price-card .product {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .price-card .from {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      text-decoration: line-through;
+    }
+
+    .price-card .price {
+      margin: 6px 0 2px;
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(50px, 6vw, 68px);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -.03em;
+    }
+
+    .price-card .price small {
+      font-size: .42em;
+      font-weight: 600;
+      color: var(--violet);
+      vertical-align: super;
+      margin-right: 4px;
+    }
+
+    .price-card .cash {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .price-card .alt {
+      margin: 0 0 24px;
+      color: var(--violet);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .price-card .cta {
+      width: 100%;
+    }
+
+    /* ---------- SEM UPSELL ---------- */
+    .skip {
+      text-align: center;
+    }
+
+    .skip h2 {
+      margin: 14px 0 14px;
+      font-size: clamp(30px, 3.8vw, 40px);
+    }
+
+    .skip p {
+      max-width: 620px;
+      margin: 0 auto 8px;
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .skip .access {
+      margin: 26px 0 18px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .skip .note {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ---------- RODAPÉ ---------- */
+    footer {
+      padding: 40px 0 34px;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    footer h3 {
+      margin: 0 0 6px;
+      font-size: 26px;
+    }
+
+    footer .contact {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    footer .legal {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 11.5px;
+    }
+
+    footer .legal i {
+      margin: 0 8px;
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .mobile-cta {
+      display: none;
+    }
+
+    /* ---------- Camada premium ---------- */
+    .order-card,
+    .compare-card,
+    .step,
+    .bonus,
+    .price-card,
+    .brand-line {
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(46, 15, 69, .045), inset 0 1px 0 rgba(255, 255, 255, .6);
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+
+    .price-card {
+      box-shadow: 0 24px 64px rgba(46, 15, 69, .16);
+    }
+
+    .order-card::before,
+    .compare-card::before,
+    .step::before,
+    .bonus::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, .7), transparent 36%),
+        radial-gradient(circle at 16% 0, rgba(106, 58, 153, .10), transparent 44%);
+      opacity: .9;
+    }
+
+    .order-card>*,
+    .compare-card>*,
+    .step>*,
+    .bonus>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .compare-card:hover,
+    .step:hover,
+    .bonus:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201, 162, 74, .55);
+      box-shadow: 0 16px 44px rgba(46, 15, 69, .09), 0 0 26px rgba(201, 162, 74, .16), inset 0 1px 0 rgba(255, 255, 255, .8);
+    }
+
+    .reveal-item {
+      opacity: 0;
+      transform: translate3d(var(--reveal-x, 0), 26px, 0);
+      transition: opacity .72s ease, transform .72s cubic-bezier(.2, .72, .18, 1), box-shadow .35s ease, border-color .35s ease;
+      transition-delay: var(--reveal-delay, 0ms);
+      will-change: opacity, transform;
+    }
+
+    .reveal-left {
+      --reveal-x: -40px;
+    }
+
+    .reveal-right {
+      --reveal-x: 40px;
+    }
+
+    .reveal-item.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .reveal-item.is-visible:hover {
+      transform: translateY(-4px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .compare-card:hover,
+      .step:hover,
+      .bonus:hover {
+        transform: none;
+      }
+    }
+
+    /* ---------- Responsivo ---------- */
+    @media (max-width: 900px) {
+      .section {
+        padding: 70px 0;
+      }
+
+      .intro-grid,
+      .offer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .price-card {
+        width: min(100%, 480px);
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .wrap {
+        width: min(100% - 28px, 1040px);
+      }
+
+      .reveal-left {
+        --reveal-x: -14px;
+      }
+
+      .reveal-right {
+        --reveal-x: 14px;
+      }
+
+      .confirm {
+        padding: 22px 0 56px;
+      }
+
+      .brand-bar {
+        margin-bottom: 36px;
+      }
+
+      .brand-bar .pill {
+        display: none;
+      }
+
+      .confirm h1 {
+        font-size: 32px;
+      }
+
+      .confirm-lead {
+        font-size: 16px;
+      }
+
+      .order-card {
+        padding: 22px;
+      }
+
+      .section-head {
+        margin-bottom: 30px;
+      }
+
+      .section-head h2,
+      .bridge h2,
+      .alone h2,
+      .offer-copy h2 {
+        font-size: 31px;
+      }
+
+      .quote,
+      .quote-gold,
+      .compare-card p {
+        font-size: 20px;
+      }
+
+      .steps,
+      .bonuses {
+        grid-template-columns: 1fr;
+      }
+
+      .vsl {
+        border-radius: 12px;
+      }
+
+      .vsl-play {
+        width: 68px;
+        height: 68px;
+      }
+
+      .price-card {
+        padding: 34px 20px 28px;
+      }
+
+      .cta,
+      .cta-ghost {
+        width: 100%;
+      }
+
+      .mobile-cta {
+        position: fixed;
+        z-index: 50;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        display: block;
+        padding: 15px 18px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep));
+        color: var(--ink);
+        text-align: center;
+        font-size: 12.5px;
+        font-weight: 800;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        box-shadow: 0 12px 35px rgba(46, 15, 69, .35);
+        opacity: 0;
+        transform: translateY(16px);
+        pointer-events: none;
+        transition: .25s ease;
+      }
+
+      .mobile-cta.visible {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) — PENDENTE -->
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mandala" viewBox="-100 -100 200 200"><image href="../../assets/logo-mandala.png" x="-100" y="-100" width="200" height="200" /></symbol>
+    <symbol id="check" viewBox="0 0 24 24">
+      <path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2" />
+      <path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+  </svg>
+
+  <main>
+    <!-- ================= CONFIRMAÇÃO ================= -->
+    <section class="confirm">
+      <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+      <div class="wrap">
+        <div class="brand-bar">
+          <a class="brand" href="#" aria-label="Sayuri de Sousa">
+            <img src="../../assets/logo-mandala.png" alt="" width="34" height="34">
+            <span><b>Sayuri de Sousa</b><small>Medicina Oriental &amp; Nutrição Funcional</small></span>
+          </a>
+          <span class="pill">Compra confirmada</span>
+        </div>
+
+        <div class="confirm-inner">
+          <div class="check-badge" aria-hidden="true"><svg><use href="#check" /></svg></div>
+          <h1>Parabéns. Você deu o primeiro passo para tirar o seu corpo do <em>Modo Defesa.</em></h1>
+          <p class="confirm-lead">A sua compra do Modo Defesa: Reconexão com a Energia Feminina foi confirmada.</p>
+          <div class="order-card">
+            <span class="kicker">Detalhes do seu pedido:</span>
+            <div class="order-row"><span>Data da compra</span><b id="data-compra">—</b></div>
+            <!-- PENDENTE: número do pedido — preenchido automaticamente se a URL vier com ?pedido=XXXX (ou ?order=) -->
+            <div class="order-row"><span>Número do pedido</span><b id="numero-pedido">—</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VSL DO UPSELL ================= -->
+    <section class="section dark upsell-intro" id="vsl">
+      <svg class="mandala bg-l" aria-hidden="true"><use href="#mandala" /></svg>
+      <svg class="mandala bg-r" aria-hidden="true"><use href="#mandala" /></svg>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow center">Antes de entrar no conteúdo</div>
+          <h2>Antes de você entrar no conteúdo, preciso te mostrar uma coisa.</h2>
+          <!-- PENDENTE: substituir "X minutos" pela duração real -->
+          <p>Assista ao vídeo abaixo, são só X minutos:</p>
+        </div>
+        <div class="vsl">
+          <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+          <!-- PENDENTE: substituir o bloco abaixo pelo embed da VSL do upsell -->
+          <div class="vsl-inner">
+            <div class="vsl-play" aria-hidden="true"></div>
+            <div class="vsl-label">Método Equilíbrio Vital</div>
+          </div>
+        </div>
+        <div class="center-cta" style="margin-top:0">
+          <a class="cta" href="#oferta" data-upsell>Quero subir de nível com condição especial</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= O RESET TE MOSTROU ================= -->
+    <section class="section bridge">
+      <div class="wrap narrow">
+        <div class="eyebrow">O próximo passo</div>
+        <h2>O Reset te mostrou o que está acontecendo com o seu corpo.</h2>
+        <p>Você entendeu o Modo Defesa. Identificou os quatro vazamentos. Começou a aplicar as primeiras mudanças e a
+          sentir os primeiros sinais de que dá para sair desse estado.</p>
+        <p><strong>E é aqui que aparece uma pergunta nova.</strong></p>
+        <p>Você já sabe o que está acontecendo.</p>
+        <div class="quote">Mas por que está acontecendo, como cada sinal do seu corpo se conecta com o outro, e o que
+          fazer para reconstruir o seu equilíbrio de forma mais profunda?</div>
+        <p>O Reset abriu a porta, quem quer atravessar de vez costuma querer mais.</p>
+      </div>
+    </section>
+
+    <!-- ================= MÉTODO EQUILÍBRIO VITAL ================= -->
+    <section class="section alt bridge" id="metodo">
+      <div class="wrap intro-grid">
+        <div>
+          <div class="eyebrow">Método Equilíbrio Vital</div>
+          <h2>É aqui que entra o <em>Método Equilíbrio Vital.</em></h2>
+          <p>É o passo seguinte do Reset. Um programa mais profundo, com aulas mais longas, onde você deixa de só
+            aplicar um protocolo e passa a entender o próprio corpo de dentro para fora.</p>
+          <p>E quem acaba de entrar no Reset tem acesso a uma <strong>condição exclusiva, disponível só aqui, só
+              agora.</strong></p>
+        </div>
+        <div class="compare">
+          <article class="compare-card">
+            <span class="kicker">Enquanto o Reset responde</span>
+            <p>“o que está acontecendo comigo?”</p>
+          </article>
+          <article class="compare-card highlight">
+            <span class="kicker">o Equilíbrio Vital responde</span>
+            <p>“por que isso acontece, como tudo se conecta e o que eu faço para reconstruir o meu equilíbrio e me manter
+              fora do Modo Defesa”.</p>
+          </article>
+          <div class="brand-line">Tudo dentro da marca <strong>Modo Defesa®</strong>, a mesma lógica que uso na clínica
+            com as minhas pacientes.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6 ETAPAS ================= -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow center">O método</div>
+          <h2>As 6 etapas do Método Equilíbrio Vital:</h2>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="num">01</span>
+            <h3>Perceber</h3>
+            <p>Aprender a reconhecer e interpretar os sinais que o seu corpo manda há anos.</p>
+          </article>
+          <article class="step"><span class="num">02</span>
+            <h3>Investigar</h3>
+            <p>Entender quais sistemas estão sustentando o Modo Defesa no seu caso.</p>
+          </article>
+          <article class="step"><span class="num">03</span>
+            <h3>Reduzir</h3>
+            <p>Diminuir, de forma estratégica, os estímulos e hábitos que mantêm o corpo em alerta.</p>
+          </article>
+          <article class="step"><span class="num">04</span>
+            <h3>Nutrir</h3>
+            <p>Reconstruir o que estava em déficit: energia, metabolismo, intestino e recuperação.</p>
+          </article>
+          <article class="step"><span class="num">05</span>
+            <h3>Restaurar</h3>
+            <p>Reorganizar sono, digestão, disposição e movimento, com a energia subindo de forma consistente.</p>
+          </article>
+          <article class="step"><span class="num">06</span>
+            <h3>Reequilibrar</h3>
+            <p>Transformar tudo em uma rotina possível dentro da sua vida real, para se sustentar sem depender de
+              começar do zero toda vez.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= POR DENTRO + BÔNUS ================= -->
+    <section class="section alt inside">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow center">Conteúdo</div>
+          <h2>O que você vê por dentro do Equilíbrio Vital</h2>
+        </div>
+        <p class="lead">Um programa aprofundado que vai a fundo em cada sistema do corpo, com temas como Modo Defesa em
+          profundidade, inflamação, metabolismo, intestino e microbiota, energia celular, estresse e sistema nervoso,
+          sono e recuperação, alimentação estratégica, Medicina Oriental aplicada à mulher 40+, composição corporal,
+          construção de rotina e longevidade.</p>
+        <h3 class="bonus-title">E mais 5 bônus:</h3>
+        <div class="bonuses">
+          <div class="bonus"><span class="ck"><svg><use href="#check" /></svg></span>
+            <p><b>Mapa de Equilíbrio Vital</b>, o panorama visual de como tudo se conecta.</p>
+          </div>
+          <div class="bonus"><span class="ck"><svg><use href="#check" /></svg></span>
+            <p><b>Guia de Alimentação para o Modo Defesa</b>, o que colocar no prato para sair do alerta.</p>
+          </div>
+          <div class="bonus"><span class="ck"><svg><use href="#check" /></svg></span>
+            <p><b>Guia de Rotinas de Recuperação</b>, pequenos rituais de sono e descanso para o seu dia.</p>
+          </div>
+          <div class="bonus"><span class="ck"><svg><use href="#check" /></svg></span>
+            <p><b>Diário de Sinais do Corpo</b>, para acompanhar a mudança semana a semana.</p>
+          </div>
+          <div class="bonus full"><span class="ck"><svg><use href="#check" /></svg></span>
+            <p><b>Aula especial: como interpretar os sinais do corpo depois dos 40.</b></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTINUAR SOZINHA ================= -->
+    <section class="section dark alone">
+      <svg class="mandala" aria-hidden="true"><use href="#mandala" /></svg>
+      <div class="wrap narrow">
+        <div class="eyebrow">O custo de cada tentativa solta</div>
+        <h2>Continuar sozinha, na tentativa e erro, é possível.</h2>
+        <p>A informação está por aí. O que pesa, na prática, é o custo de cada tentativa solta.</p>
+        <p>Testar mais uma dieta que não dura, comprar mais um suplemento que não resolve, mexer em um sintoma e
+          destravar outro, e ir perdendo tempo e energia com soluções que olham só para um pedaço.</p>
+        <p>Cada volta dessa custa tempo. E tempo, nessa fase da vida, é justamente o que você não quer desperdiçar.</p>
+        <div class="quote-gold">O Equilíbrio Vital existe para encurtar esse caminho. Você sai daqui entendendo o
+          próprio corpo e sabendo, sozinha, como ajustar a rotina para se manter fora do Modo Defesa nos próximos anos.
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OFERTA ================= -->
+    <section class="section" id="oferta">
+      <div class="wrap offer-grid">
+        <div class="offer-copy">
+          <div class="eyebrow">Só aqui, só agora</div>
+          <h2>Condição exclusiva para quem acabou de entrar no <em>Reset:</em></h2>
+          <div class="urgency"><svg aria-hidden="true"><use href="#clock" /></svg><span>Essa condição expira quando
+              você sair desta página.</span></div>
+        </div>
+        <div class="price-card">
+          <span class="tag">Oferta exclusiva para alunas do Reset</span>
+          <p class="product">Método Equilíbrio Vital</p>
+          <!-- PENDENTE: preços reais -->
+          <p class="from">De R$ XXX</p>
+          <p class="price"><small>R$</small>XXX</p>
+          <p class="cash">à vista</p>
+          <p class="alt">ou em até 12x de R$ XX,XX</p>
+          <!-- PENDENTE: link de checkout do upsell — UPSELL_URL no script -->
+          <a class="cta" href="#oferta" data-upsell>Quero garantir minha condição especial</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NÃO É O MOMENTO ================= -->
+    <section class="section alt skip">
+      <div class="wrap">
+        <div class="eyebrow center">Seu acesso continua garantido</div>
+        <h2>Não é o momento? Sem problemas.</h2>
+        <p>Você continua com acesso integral ao Modo Defesa: Reconexão com a Energia Feminina que acabou de garantir, e a todos os bônus
+          dele.</p>
+        <p class="access">Acesse seu programa:</p>
+        <!-- PENDENTE: link da área de membros — MEMBER_URL no script -->
+        <a class="cta-ghost" href="#" data-member>Acessar o Modo Defesa: Reconexão com a Energia Feminina</a>
+        <p class="note">Ou abra o e-mail que acabou de chegar na sua caixa de entrada com os dados de acesso. Se não
+          aparecer nos próximos minutos, dá uma olhada no spam ou em promoções.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <h3>Dúvidas? Estou por aqui.</h3>
+      <!-- PENDENTE: e-mail e WhatsApp de suporte -->
+      <p class="contact">E-mail: suporte@XXX.com &nbsp;|&nbsp; WhatsApp XX XXXX-XXXX</p>
+      <div class="legal">Acesso por 1 ano<i>|</i>Compra 100% segura<i>|</i>Suporte disponível<i>|</i>Direitos reservados à
+        Sayuri</div>
+    </div>
+  </footer>
+
+  <a class="mobile-cta" href="#oferta" data-upsell>Quero garantir minha condição especial</a>
+
+  <script>
+    // PENDENTE: links reais. Enquanto vazios, os botões rolam até a oferta / ficam inertes.
+    const UPSELL_URL = "";   // checkout do Método Equilíbrio Vital (condição exclusiva)
+    const MEMBER_URL = "";   // área de membros do Modo Defesa: Reconexão com a Energia Feminina
+    document.querySelectorAll('[data-upsell]').forEach((a) => {
+      if (UPSELL_URL) { a.href = UPSELL_URL; a.target = '_blank'; a.rel = 'noopener'; }
+    });
+    document.querySelectorAll('[data-member]').forEach((a) => {
+      if (MEMBER_URL) { a.href = MEMBER_URL; a.target = '_blank'; a.rel = 'noopener'; }
+    });
+
+    // Data da compra (hoje) e número do pedido vindo da URL (?pedido= ou ?order=)
+    const d = new Date();
+    const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+    document.getElementById('data-compra').textContent = `${d.getDate()} de ${meses[d.getMonth()]} de ${d.getFullYear()}`;
+    const params = new URLSearchParams(location.search);
+    const pedido = params.get('pedido') || params.get('order') || params.get('order_id');
+    if (pedido) document.getElementById('numero-pedido').textContent = `#${pedido}`;
+
+    // Botão fixo no mobile aparece depois da confirmação
+    const confirm = document.querySelector('.confirm');
+    const mobileCta = document.querySelector('.mobile-cta');
+    if (confirm && mobileCta && 'IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => {
+        mobileCta.classList.toggle('visible', !entry.isIntersecting);
+      }, { threshold: 0.08 }).observe(confirm);
+    }
+
+    // Reveal ao rolar
+    const revealItems = document.querySelectorAll('.order-card,.compare-card,.brand-line,.step,.bonus,.price-card,.urgency');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    revealItems.forEach((item, index) => {
+      item.classList.add('reveal-item', index % 2 === 0 ? 'reveal-left' : 'reveal-right');
+      item.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 70}ms`);
+    });
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
+    } else {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+      revealItems.forEach((item) => revealObserver.observe(item));
+    }
+  </script>
+</body>
+
+</html>
