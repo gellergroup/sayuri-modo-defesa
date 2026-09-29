@@ -1,0 +1,7 @@
+Subir o index.html desta pasta em:  public_html/modo-defesa/index.html
+
+Ele nao e uma pagina: so manda quem abrir /modo-defesa/ direto para /modo-defesa/eua/.
+Serve para o link antigo, ja divulgado, nao mostrar erro.
+
+Depois de subir, testar:  https://seedofhealth.online/modo-defesa/
+Tem que abrir a pagina em dolar automaticamente.

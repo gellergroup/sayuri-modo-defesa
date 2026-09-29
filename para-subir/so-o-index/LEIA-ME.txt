@@ -1,0 +1,10 @@
+Cada subpasta aqui corresponde a uma pasta no servidor.
+Suba o index.html de dentro dela substituindo o que esta la.
+
+  modo-defesa--eua        ->  public_html/modo-defesa/eua/index.html
+  modo-defesa--br         ->  public_html/modo-defesa/br/index.html
+  equilibrio-vital--eua   ->  public_html/equilibrio-vital/eua/index.html
+  equilibrio-vital--br    ->  public_html/equilibrio-vital/br/index.html
+
+ANTES disso, crie public_html/videos/ e suba os 4 arquivos da pasta ../videos/
+Sem isso o player fica preto.

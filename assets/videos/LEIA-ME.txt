@@ -1,0 +1,11 @@
+Solte aqui os arquivos de video das paginas da Sayuri.
+
+Nomes sugeridos, para eu saber onde cada um entra:
+
+  vsl-modo-defesa.mp4           -> pagina de vendas Modo Defesa (EUA e BR)
+  vsl-equilibrio-vital.mp4      -> pagina de vendas Equilibrio Vital (EUA e BR)
+  vsl-upsell-obrigado.mp4       -> video do upsell na pagina de obrigado
+
+Se o video for diferente entre EUA e Brasil, acrescente -eua ou -br no nome.
+
+Formato ideal: MP4 (H.264 + AAC). MOV e outros eu converto.
